@@ -187,14 +187,14 @@ h1 span {
     margin-top: 15%;
 }
 
-/* .bola2 {
+.bola2 {
     position: absolute;
     border-radius: 50%;
     width: 13px;
     height: 13px;
     box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
     background-color: rgb(249, 173, 38);
-    margin-top: 10%;
+    margin-top: 30%;
 }
 
 .bola3 {
@@ -204,7 +204,7 @@ h1 span {
     height: 13px;
     box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
     background-color: rgb(249, 173, 38);
-    margin-top: 15%;
+    margin-top: 47%;
 }
 
 .bola4 {
@@ -214,7 +214,7 @@ h1 span {
     height: 13px;
     box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
     background-color: rgb(249, 173, 38);
-    margin-top: 20%;
+    margin-top: 63%;
 }
 
 .bola5 {
@@ -224,8 +224,8 @@ h1 span {
     height: 13px;
     box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
     background-color: rgb(249, 173, 38);
-    margin-top: 25%;
-} */
+    margin-top: 78%;
+} 
 
 .saga .container .info1 {
     display: flex;
