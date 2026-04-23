@@ -78,33 +78,39 @@ a {
 
 .header button:hover {
     background-color: rgb(151, 0, 13);
+    border: 2px solid rgb(194, 0, 17);
 }
 
-.titulo {
+.fachada {
     margin-top: 120px;
 }
 
-.titulo .container {
+.fachada .container {
     display: flex;
     flex-direction: column;
 }
 
 .divisoria {
-    width: 150px;
+    width: 200px;
     border: none;
     height: 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(249, 173, 38), rgba(0, 0, 0, 0));
 }
 
-.titulo .container h4 {
+.espacamentoDivisoria {
+    margin: 20px 0 50px 0;
+}
+
+.fachada h5{
     letter-spacing: 5px;
     font-family: 'constantia';
+    font-size: 16px;
     font-weight: 100;
     color: rgb(249, 173, 38);
     margin: 15px 0 40px 0;
 }
 
-.titulo .container h1 {
+.fachada .container h1 {
     font-family: 'constancia';
     color: rgb(255, 255, 255);
     font-size: 130px;
@@ -117,14 +123,14 @@ h1 span {
 
 }
 
-.titulo .container p {
+.fachada .container p {
     font-family: 'constantia';
-    color: rgba(134, 122, 113);
+    color: rgb(134, 122, 113);
     font-size: 19px;
     margin: 10px 0 0 0;
 }
 
-.titulo .container button {
+.fachada .container button {
     background-color: rgb(194, 0, 17);
     color: rgb(255, 255, 255);
     font-family: 'constantia';
@@ -135,6 +141,11 @@ h1 span {
     border-radius: 5px;
     cursor: pointer;
     margin: 30px 0 0 0;
+}
+
+.fachada .container button:hover {
+    background-color: rgb(151, 0, 13);
+    border: 2px solid rgb(194, 0, 17);
 }
 
 .saga {
@@ -148,13 +159,16 @@ h1 span {
 .saga .container {
     display: flex;
     flex-direction: row;
+    margin: -50px 0 40px 0;
 }
 
-.saga .subtitulo {
+.subtitulo {
     display: flex;
     justify-content: center;
     margin-top: 90px;
     font-family: 'constantia';
+    font-size: 19px;
+    font-weight: 100;
     color: rgb(151, 0, 13);
 }
 
@@ -169,6 +183,7 @@ h1 span {
 }
 
 .saga .linhaTempo {
+    position: relative;
     display: flex;
     order: 2;
     flex-direction: row;
@@ -183,55 +198,34 @@ h1 span {
     margin-top: 100px;
 }
 
-.bola1 {
+.bola {
     position: absolute;
     border-radius: 50%;
     width: 13px;
     height: 13px;
     box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
     background-color: rgb(249, 173, 38);
-    margin-top: 15%;
+}
+
+.bola1 {
+    top: 17%;
 }
 
 .bola2 {
-    position: absolute;
-    border-radius: 50%;
-    width: 13px;
-    height: 13px;
-    box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
-    background-color: rgb(249, 173, 38);
-    margin-top: 30%;
+    top: 33%;
 }
 
 .bola3 {
-    position: absolute;
-    border-radius: 50%;
-    width: 13px;
-    height: 13px;
-    box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
-    background-color: rgb(249, 173, 38);
-    margin-top: 47%;
+    top: 53%;
 }
 
 .bola4 {
-    position: absolute;
-    border-radius: 50%;
-    width: 13px;
-    height: 13px;
-    box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
-    background-color: rgb(249, 173, 38);
-    margin-top: 63%;
+    top: 70%;
 }
 
 .bola5 {
-    position: absolute;
-    border-radius: 50%;
-    width: 13px;
-    height: 13px;
-    box-shadow: 0 -2px 40px 1px rgba(249, 173, 38, 0.8);
-    background-color: rgb(249, 173, 38);
-    margin-top: 78%;
-} 
+    top: 87%;
+}
 
 .saga .container .info1 {
     display: flex;
@@ -280,10 +274,281 @@ h1 span {
     font-size: 15px;
 }
 
-.saga .container .espacamentoTop {
+.saga .container .espacamentoGow {
     margin-top: -10px;
 }
 
 .gow {
     margin-top: 80px;
+}
+
+.personagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2000px;
+    background-color: rgb(6, 7, 11);
+    box-shadow: inset 0 50px 100px -10px rgb(0, 0, 0, 0.7);
+}
+
+.personagens h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'constantia';
+    font-size: 55px;
+    margin-top: -10px;
+}
+
+.personagens p {
+    color: rgba(134, 122, 113);
+    font-size: 17px;
+    margin-top: -15px;
+}
+
+.personagens .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+    justify-items: center; 
+    place-items: center;
+}
+
+.kratos {
+    position: relative;   
+    width: 400px;
+    height: 450px;
+    background-color: rgb(14, 16, 26);
+    border: 2px solid rgba(151, 0, 13, 0.4);
+    margin-bottom: 60px;
+    transition: 1s;
+}
+
+.kratos:hover {
+    border: 2px solid rgba(255, 5, 26, 0.5);
+    background-image: url("../assets/img/fundo_kratos_card.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.kratos img {
+    transition: 1.5s;
+}
+
+.kratos:hover img {
+    margin-top: -70px;
+}
+
+
+.kratos .textoKratos {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.kratos:hover .textoKratos {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(144, 3, 8), rgb(144, 3, 8));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.titulo {
+    margin: 30% 0 0 5%;
+    font-family: 'constantia';
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(249, 173, 38);
+    transition: 1.5s;
+}
+
+.kratos:hover .titulo {
+    margin-top: 43%;
+}
+
+.nome {
+    margin: 5px 0 0 5%;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.personagens .container p {
+    margin: 5px 0 2px 5%;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0);
+    transition: 1s;
+}
+
+.personagens .container .kratos:hover p {
+    margin: 5px 0 2px 5%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.atreus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;   
+    width: 400px;
+    height: 450px;
+    background-color: rgb(14, 16, 26);
+    border: 2px solid rgba(253, 195, 69, 0.4);
+    margin-bottom: 60px;
+    transition: 1s;
+}
+
+.atreus:hover {
+    border: 2px solid rgba(253, 195, 69, 0.8);
+    background-image: url("../assets/img/fundo_atreus_card.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.atreus img {
+    width: 380px;
+    transition: 1.5s;
+}
+
+.atreus:hover img {
+    margin-top: -120px;
+}
+
+.atreus .textoAtreus {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.atreus:hover .textoAtreus {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(199, 129, 6), rgb(199, 129, 6));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.atreus:hover .titulo {
+    margin-top: 43%;
+    color: rgb(255, 255, 255);
+}
+
+.personagens .container .atreus:hover p {
+    margin: 5px 0 2px 5%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.mimir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;   
+    width: 400px;
+    height: 450px;
+    background-color: rgb(14, 16, 26);
+    border: 2px solid rgba(170, 187, 52, 0.4);
+    margin-bottom: 60px;
+    transition: 1s;
+}
+
+.mimir:hover {
+    border: 2px solid rgba(212, 240, 33, 0.8);
+    background-image: url("../assets/img/fundo_mimir_card.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.mimir img {
+    width: 180px;
+    transition: 1.5s;
+}
+
+.mimir:hover img {
+    margin-top: -120px;
+}
+
+.mimir .textoMimir {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.mimir:hover .textoMimir {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(112, 142, 24), rgb(112, 142, 24));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.mimir:hover .titulo {
+    margin-top: 43%;
+}
+
+.personagens .container .mimir:hover p {
+    margin: 5px 0 2px 5%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.freya {
+    display: flex;
+    align-items: center;
+    position: relative;   
+    width: 400px;
+    height: 450px;
+    background-color: rgb(14, 16, 26);
+    border: 2px solid rgba(146, 29, 136, 0.4);
+    margin-bottom: 60px;
+    transition: 1s;
+}
+
+.freya:hover {
+    border: 2px solid rgba(228, 45, 212, 0.8);
+    background-image: url("../assets/img/fundo_freya_card.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.freya img {
+    margin: 10px 0 0 120px;
+    width: 180px;
+    transition: 1.5s;
+}
+
+.freya:hover img {
+    margin-top: -150px;
+}
+
+.freya .textoFreya {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.freya:hover .textoFreya {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(112, 29, 115), rgb(112, 29, 115));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.freya:hover .titulo {
+    margin-top: 43%;
+}
+
+.personagens .container .freya:hover p {
+    margin: 5px 0 2px 5%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
 }
