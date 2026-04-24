@@ -101,7 +101,7 @@ a {
     margin: 20px 0 50px 0;
 }
 
-.fachada h5{
+.fachada h5 {
     letter-spacing: 5px;
     font-family: 'constantia';
     font-size: 16px;
@@ -120,6 +120,7 @@ a {
 
 h1 span {
     color: rgb(249, 173, 38);
+    margin-left: 10px;
 
 }
 
@@ -172,7 +173,7 @@ h1 span {
     color: rgb(151, 0, 13);
 }
 
-.saga h1 {
+.titulo {
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -288,7 +289,8 @@ h1 span {
     align-items: center;
     height: 1400px;
     background-color: rgb(6, 7, 11);
-    box-shadow: inset 0 50px 100px -10px rgb(0, 0, 0, 0.7);
+    box-shadow: inset 0 100px 100px 10px rgba(0, 0, 0, 0.7);
+    
 }
 
 .personagens h1 {
@@ -308,12 +310,39 @@ h1 span {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: auto;
-    justify-items: center; 
+    justify-items: center;
     place-items: center;
 }
 
+.alcunha {
+    margin: 30% 0 0 5%;
+    font-family: 'constantia';
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(249, 173, 38);
+    transition: 1.5s;
+}
+
+.nome {
+    margin: 5px 0 0 5%;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.personagens .container p {
+    margin: 5px 0 2px 5%;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: 1s;
+}
+
 .kratos {
-    position: relative;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: 400px;
     height: 450px;
     background-color: rgb(14, 16, 26);
@@ -330,13 +359,13 @@ h1 span {
 }
 
 .kratos img {
+    width: 350px;
     transition: 1.5s;
 }
 
 .kratos:hover img {
     margin-top: -70px;
 }
-
 
 .kratos .textoKratos {
     position: absolute;
@@ -354,31 +383,8 @@ h1 span {
     transition: 0.8s;
 }
 
-.titulo {
-    margin: 30% 0 0 5%;
-    font-family: 'constantia';
-    font-weight: 100;
-    font-size: 15px;
-    letter-spacing: 2px;
-    color: rgb(249, 173, 38);
-    transition: 1.5s;
-}
-
-.kratos:hover .titulo {
+.kratos:hover .alcunha {
     margin-top: 43%;
-}
-
-.nome {
-    margin: 5px 0 0 5%;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-}
-
-.personagens .container p {
-    margin: 5px 0 2px 5%;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0);
-    transition: 1s;
 }
 
 .personagens .container .kratos:hover p {
@@ -391,7 +397,7 @@ h1 span {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;   
+    position: relative;
     width: 400px;
     height: 450px;
     background-color: rgb(14, 16, 26);
@@ -432,7 +438,7 @@ h1 span {
     transition: 0.8s;
 }
 
-.atreus:hover .titulo {
+.atreus:hover .alcunha {
     margin-top: 43%;
     color: rgb(255, 255, 255);
 }
@@ -447,7 +453,7 @@ h1 span {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;   
+    position: relative;
     width: 400px;
     height: 450px;
     background-color: rgb(14, 16, 26);
@@ -488,7 +494,7 @@ h1 span {
     transition: 0.8s;
 }
 
-.mimir:hover .titulo {
+.mimir:hover .alcunha {
     margin-top: 43%;
 }
 
@@ -501,7 +507,7 @@ h1 span {
 .freya {
     display: flex;
     align-items: center;
-    position: relative;   
+    position: relative;
     width: 400px;
     height: 450px;
     background-color: rgb(14, 16, 26);
@@ -543,7 +549,7 @@ h1 span {
     transition: 0.8s;
 }
 
-.freya:hover .titulo {
+.freya:hover .alcunha {
     margin-top: 43%;
 }
 
@@ -557,11 +563,11 @@ h1 span {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;   
+    position: relative;
     width: 400px;
     height: 450px;
     background-color: rgb(14, 16, 26);
-    border: 2px solid rgba(56, 28, 11, 0.4);
+    border: 2px solid rgba(56, 28, 11, 0.5);
     margin-bottom: 60px;
     transition: 1s;
 }
@@ -599,7 +605,7 @@ h1 span {
     transition: 0.8s;
 }
 
-.odin:hover .titulo {
+.odin:hover .alcunha {
     margin-top: 43%;
 }
 
@@ -613,7 +619,7 @@ h1 span {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;   
+    position: relative;
     width: 400px;
     height: 450px;
     background-color: rgb(14, 16, 26);
@@ -623,7 +629,7 @@ h1 span {
 }
 
 .thor:hover {
-    border: 2px solid rgba(67, 140, 212, 0.8);
+    border: 2px solid rgba(115, 179, 243, 0.8);
     background-image: url("../assets/img/cards/fundo_thor_card.png");
     background-size: cover;
     background-position: center;
@@ -655,7 +661,7 @@ h1 span {
     transition: 0.8s;
 }
 
-.thor:hover .titulo {
+.thor:hover .alcunha {
     margin-top: 43%;
 }
 
@@ -663,4 +669,37 @@ h1 span {
     margin: 5px 0 2px 5%;
     font-size: 16px;
     color: rgb(255, 255, 255);
+}
+
+.arsenal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -5px;
+    background-image: url("../assets/img/fundo_arsenal.png");
+    box-shadow: inset  0 70px 50px 30px rgb(6, 7, 11);
+    
+}
+
+.arsenal h4 {
+    color: rgb(151, 0, 13);
+    font-size: 19px;
+    margin: 20px 0 5px 0;
+}
+
+.arsenal h1 {
+    text-shadow: none;
+}
+
+.arsenal .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+    justify-items: center;
+    place-items: center;
 }
