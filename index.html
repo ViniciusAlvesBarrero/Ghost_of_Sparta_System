@@ -31,7 +31,7 @@
                 <h1><span>WAR</span></h1>
                 <p>De Esparta aos Nove Reinos. Descubra a saga épica de vingança, redenção e o laço</p>
                 <p>entre pai e filho que desafiou os deuses.</p>
-                <button onclick="trocar()">EXPLORAR A SAGA</button>
+                <button class="btnSaga" onclick="trocar()">EXPLORAR A SAGA</button>
             </div>
         </div>
     </div>
@@ -103,9 +103,9 @@
         <p>Nove Reinos.</p>
         <div class="divisoria espacamentoDivisoria"></div>
         <div class="container">
-            <div class="kratos">
+            <div class="kratos card">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\kratos_card.png">
-                <div class="textoKratos">
+                <div class="textoCard">
                     <h5 class="alcunha">O FANTASMA DE ESPARTA</h5>
                     <h4 class="nome">Kratos</h4>
                     <p>Outrora um general espartano consumido pela raiva, Kratos agora busca redenção nas terras
@@ -113,45 +113,45 @@
                         pecados.</p>
                 </div>
             </div>
-            <div class="atreus">
+            <div class="atreus card">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\atreus_card.png">
-                <div class="textoAtreus">
+                <div class="textoCard">
                     <h5 class="alcunha">LOKI - O GAROTO</h5>
                     <h4 class="nome">Atreus</h4>
                     <p>Filho de Kratos e Faye, Atreus é curioso, corajoso e destinado a um papel muito maior do que
                         imagina. Sua verdadeira identidade como Loki molda o destino dos Nove Reinos.</p>
                 </div>
             </div>
-            <div class="mimir">
+            <div class="mimir card">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\mimir_card.png">
-                <div class="textoMimir">
+                <div class="textoCard">
                     <h5 class="alcunha">A CABEÇA MAIS SÁBIA</h5>
                     <h4 class="nome">MÍMIR</h4>
                     <p>O conselheiro mais inteligente dos reinos, agora literalmente uma cabeça presa ao cinto de
                         Kratos. Mímir oferece sabedoria, humor e histórias sobre os deuses nórdicos.</p>
                 </div>
             </div>
-            <div class="freya">
+            <div class="freya card">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\freya_card.png">
-                <div class="textoFreya">
+                <div class="textoCard">
                     <h5 class="alcunha">A RAINHA DAS VALQUÍRIAS</h5>
                     <h4 class="nome">Freya</h4>
                     <p>Deusa Vanir, ex-esposa de Odin e mãe de Baldur. Após a morte de seu filho pelas mãos de Kratos,
                         Freya jurou vingança, até o destino forçá-los a se unirem novamente.</p>
                 </div>
             </div>
-            <div class="odin">
+            <div class="odin card">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\odin_card.png">
-                <div class="textoOdin">
+                <div class="textoCard">
                     <h5 class="alcunha">O PAI DE TODOS</h5>
                     <h4 class="nome">Odin</h4>
                     <p>O Pai de Todos. Manipulador, obsessivo e perigoso. Odin busca conhecimento acima de tudo, e
                         destruirá qualquer um que ameace seu controle sobre os Nove Reinos.</p>
                 </div>
             </div>
-            <div class="thor">
+            <div class="thor card">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\thor_card.png">
-                <div class="textoThor">
+                <div class="textoCard">
                     <h5 class="alcunha">O DEUS DO TROVÃO</h5>
                     <h4 class="nome">Thor</h4>
                     <p>Portador do Mjölnir e filho de Odin. Diferente das lendas heroicas, o Thor de God of War é
@@ -165,25 +165,25 @@
         <h4 class="subtitulo">ARSENAL</h4>
         <h1 class="titulo">Armas <span>Lendárias</span></h1>
         <div class="container">
-            <div class="leviata">
+            <div class="leviata cardArma">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\leviata_card.png">
-                <div class="textoLeviata">
+                <div class="textoCardArma">
                     <h4 class="nome">Leviatã</h4>
                     <p>Forjado pelos irmãos Brok e Sindri, o Machado Leviatã foi criado para rivalizar com o Mjölnir de
                         Thor. Imbuído com o poder do gelo, retorna à mão de seu portador quando arremessado.</p>
                 </div>
             </div>
-            <div class="laminas">
+            <div class="laminas cardArma">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\laminas_card.png">
-                <div class="textoLaminas">
+                <div class="textoCardArma">
                     <h4 class="nome">Lâminas do Caos</h4>
                     <p>Acorrentadas aos braços de Kratos por Ares como lembrete de seus pecados, as Lâminas do Caos
                         ardem com fogo eterno. Representam o passado sombrio que Kratos nunca pode escapar.</p>
                 </div>
             </div>
-            <div class="draupnir">
+            <div class="draupnir cardArma">
                 <img src="..\Ghost_of_Sparta_Legacy\assets\img\cards\draupnir_card.png">
-                <div class="textoDraupnir">
+                <div class="textoCardArma">
                     <h4 class="nome">Lança Draupnir</h4>
                     <p>Forjada do anel mágico Draupnir e entregue a Kratos por Brok e Sindri, a Lança Draupnir se
                         multiplica ao ser lançada. Refletindo a nova forma de lutar de Kratos, não mais com fúria cega,
@@ -227,17 +227,23 @@
 
     function trocar() {
 
-        fachada.innerHTML = 
-        `<div class="banner">
+        fachada.innerHTML =
+            `<div class="banner">
             <div class="container">
                 <video autoplay muted loop src="../Ghost_of_Sparta_Legacy/assets/video/saga.mp4" class="video-bg"></video>
             </div>
-
-            <div class="conteudo">
-                <h1>Seu conteúdo aqui</h1>
-            </div>
-        </div>`
+            
+            /* aqui */
+            
+            </div>`
 
     }
 
 </script>
+
+
+<div class="conteudo">
+    <div class="container">
+
+    </div>
+</div>

@@ -8,10 +8,11 @@ body {
     background-image: url("../assets/img/fundo_home.png");
     width: 100%;
     height: 100vh;
-    background-size: cover;
+    background-size: 102%;
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: inset 0 -90px 100px 10px rgb(0, 0, 0);
+    transition: 3s;
 }
 
 .container {
@@ -93,6 +94,7 @@ li {
 .fachada .container {
     display: flex;
     flex-direction: column;
+    transition: 3s;
 }
 
 .divisoria {
@@ -158,6 +160,14 @@ h1 span {
     border: 2px solid rgb(194, 0, 17);
 }
 
+.inicio:has(.btnSaga:hover) {
+    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.8);
+}
+
+.inicio:has(.btnSaga:hover) {
+    background-size: 130%;
+}
+
 .banner {
     position: relative;
     width: 100%;
@@ -171,7 +181,7 @@ h1 span {
     left: 0;
     width: 100%;
     height: 100vh;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .banner .container::after {
@@ -179,7 +189,7 @@ h1 span {
     position: absolute;
     inset: 0;
     box-shadow: inset 0 0 100px 100vh rgba(0, 0, 0, 0.85),
-    inset 0 -150px 80px rgb(0, 0, 0);
+        inset 0 -150px 80px rgb(0, 0, 0);
 }
 
 .conteudo {
@@ -377,17 +387,45 @@ h1 span {
     transition: 1s;
 }
 
-.kratos {
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 400px;
-    height: 450px;
+    width: 380px;
+    height: 430px;
     background-color: rgb(14, 16, 26);
-    border: 2px solid rgba(151, 0, 13, 0.4);
     margin-bottom: 60px;
     transition: 1s;
+}
+
+.card .textoCard {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.card:hover img {
+    margin-top: -100px;
+}
+
+.card:hover .alcunha {
+    margin-top: 43%;
+}
+
+.personagens .container .card:hover p {
+    margin: 5px 0 2px 5%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.kratos {
+    border: 2px solid rgba(151, 0, 13, 0.4);
 }
 
 .kratos:hover {
@@ -399,52 +437,19 @@ h1 span {
 }
 
 .kratos img {
-    width: 350px;
+    width: 320px;
     transition: 1.5s;
 }
 
-.kratos:hover img {
-    margin-top: -70px;
-}
 
-.kratos .textoKratos {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 200px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.kratos:hover .textoKratos {
+.kratos:hover .textoCard {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(144, 3, 8), rgb(144, 3, 8));
     height: 330px;
     transition: 0.8s;
 }
 
-.kratos:hover .alcunha {
-    margin-top: 43%;
-}
-
-.personagens .container .kratos:hover p {
-    margin: 5px 0 2px 5%;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-}
-
 .atreus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background-color: rgb(14, 16, 26);
     border: 2px solid rgba(253, 195, 69, 0.4);
-    margin-bottom: 60px;
-    transition: 1s;
 }
 
 .atreus:hover {
@@ -456,53 +461,22 @@ h1 span {
 }
 
 .atreus img {
-    width: 280px;
+    width: 270px;
     transition: 1.5s;
 }
 
-.atreus:hover img {
-    margin-top: -120px;
-}
-
-.atreus .textoAtreus {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 200px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.atreus:hover .textoAtreus {
+.atreus:hover .textoCard {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(199, 129, 6), rgb(199, 129, 6));
     height: 330px;
     transition: 0.8s;
 }
 
 .atreus:hover .alcunha {
-    margin-top: 43%;
-    color: rgb(255, 255, 255);
-}
-
-.personagens .container .atreus:hover p {
-    margin: 5px 0 2px 5%;
-    font-size: 16px;
     color: rgb(255, 255, 255);
 }
 
 .mimir {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background-color: rgb(14, 16, 26);
     border: 2px solid rgba(170, 187, 52, 0.4);
-    margin-bottom: 60px;
-    transition: 1s;
 }
 
 .mimir:hover {
@@ -514,52 +488,18 @@ h1 span {
 }
 
 .mimir img {
-    width: 180px;
+    width: 170px;
     transition: 1.5s;
 }
 
-.mimir:hover img {
-    margin-top: -120px;
-}
-
-.mimir .textoMimir {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 200px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.mimir:hover .textoMimir {
+.mimir:hover .textoCard {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(112, 142, 24), rgb(112, 142, 24));
     height: 330px;
     transition: 0.8s;
 }
 
-.mimir:hover .alcunha {
-    margin-top: 43%;
-}
-
-.personagens .container .mimir:hover p {
-    margin: 5px 0 2px 5%;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-}
-
 .freya {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background-color: rgb(14, 16, 26);
     border: 2px solid rgba(146, 29, 136, 0.4);
-    margin-bottom: 60px;
-    transition: 1s;
 }
 
 .freya:hover {
@@ -572,52 +512,18 @@ h1 span {
 
 .freya img {
     margin: 10px 0 0 0;
-    width: 240px;
+    width: 220px;
     transition: 1.5s;
 }
 
-.freya:hover img {
-    margin-top: -100px;
-}
-
-.freya .textoFreya {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 200px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.freya:hover .textoFreya {
+.freya:hover .textoCard {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(112, 29, 115), rgb(112, 29, 115));
     height: 330px;
     transition: 0.8s;
 }
 
-.freya:hover .alcunha {
-    margin-top: 43%;
-}
-
-.personagens .container .freya:hover p {
-    margin: 5px 0 2px 5%;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-}
-
 .odin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background-color: rgb(14, 16, 26);
     border: 2px solid rgba(56, 28, 11, 0.5);
-    margin-bottom: 60px;
-    transition: 1s;
 }
 
 .odin:hover {
@@ -634,48 +540,14 @@ h1 span {
     transition: 1.5s;
 }
 
-.odin:hover img {
-    margin-top: -120px;
-}
-
-.odin .textoOdin {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 200px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.odin:hover .textoOdin {
+.odin:hover .textoCard {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(100, 51, 20), rgb(100, 51, 20));
     height: 330px;
     transition: 0.8s;
 }
 
-.odin:hover .alcunha {
-    margin-top: 43%;
-}
-
-.personagens .container .odin:hover p {
-    margin: 5px 0 2px 5%;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-}
-
 .thor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background-color: rgb(14, 16, 26);
     border: 2px solid rgba(33, 72, 110, 0.4);
-    margin-bottom: 60px;
-    transition: 1s;
 }
 
 .thor:hover {
@@ -692,35 +564,10 @@ h1 span {
     transition: 1.5s;
 }
 
-.thor:hover img {
-    margin-top: -120px;
-}
-
-.thor .textoThor {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 200px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.thor:hover .textoThor {
+.thor:hover .textoCard {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(52, 105, 159), rgb(52, 105, 159));
     height: 330px;
     transition: 0.8s;
-}
-
-.thor:hover .alcunha {
-    margin-top: 43%;
-}
-
-.personagens .container .thor:hover p {
-    margin: 5px 0 2px 5%;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
 }
 
 .arsenal {
@@ -770,7 +617,7 @@ h1 span {
     color: rgba(0, 0, 0, 0);
 }
 
-.leviata {
+.cardArma {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -786,13 +633,52 @@ h1 span {
     transition: 1.5s;
 }
 
+.cardArma:hover img {
+    margin-top: -60px;
+}
+
+.cardArma .textoCardArma {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.cardArma:hover .textoCardArma {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
+    height: 200px;
+}
+
+.cardArma .textoCardArma .nome {
+    transition: 1.5s;
+}
+
+.cardArma:hover .textoCardArma .nome {
+    color: rgba(0, 0, 0, 0);
+}
+
+.arsenal .container .cardArma:hover p {
+    margin: 25px 5% 2px 5%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+    color: rgb(175, 159, 147);
+}
+
 .leviata:hover {
     border: none;
     border-radius: 10px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_leviata_card.png");
     box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
     background-size: cover;
     background-position: center;
+}
+
+.leviata:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_leviata_card.png");
 }
 
 .leviata img {
@@ -801,65 +687,8 @@ h1 span {
     transition: 1.5s;
 }
 
-.leviata:hover img {
-    margin-top: -60px;
-}
-
-.leviata .textoLeviata {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 100px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.leviata:hover .textoLeviata {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    height: 200px;
-}
-
-.leviata .textoLeviata .nome {
-    transition: 1.5s;
-}
-
-.leviata:hover .textoLeviata .nome {
-    color: rgba(0, 0, 0, 0);
-}
-
-.arsenal .container .leviata:hover p {
-    margin: 25px 5% 2px 5%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 100;
-    color: rgb(175, 159, 147);
-}
-
-.laminas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 420px;
-    height: 450px;
-    background-color: rgba(14, 16, 26, 0.75);
-    border: 2px solid rgba(33, 72, 110, 0.4);
-    box-shadow: 0 0 100px -30px rgba(249, 173, 38, 0.2);
-    margin: 30px auto 80px auto;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    transition: 1.5s;
-}
-
 .laminas:hover {
-    border: none;
-    border-radius: 10px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_laminas_card.png");
-    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
-    background-size: cover;
-    background-position: center;
 }
 
 .laminas img {
@@ -868,107 +697,14 @@ h1 span {
     transition: 1.5s;
 }
 
-.laminas:hover img {
-    margin-top: -60px;
-}
-
-.laminas .textoLaminas {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 100px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.laminas:hover .textoLaminas {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    height: 200px;
-}
-
-.laminas .textoLaminas .nome {
-    transition: 1.5s;
-}
-
-.laminas:hover .textoLaminas .nome {
-    color: rgba(0, 0, 0, 0);
-}
-
-.arsenal .container .laminas:hover p {
-    margin: 25px 5% 2px 5%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 100;
-    color: rgb(175, 159, 147);
-}
-
-.draupnir {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 420px;
-    height: 450px;
-    background-color: rgba(14, 16, 26, 0.75);
-    border: 2px solid rgba(33, 72, 110, 0.4);
-    box-shadow: 0 0 100px -30px rgba(249, 173, 38, 0.2);
-    margin: 30px auto 80px auto;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    transition: 1.5s;
-}
-
 .draupnir:hover {
-    border: none;
-    border-radius: 10px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_draupnir_card.png");
-    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
-    background-size: cover;
-    background-position: center;
 }
 
 .draupnir img {
     margin: 10px 0 0 0;
     width: 400px;
     transition: 1.5s;
-}
-
-.draupnir:hover img {
-    margin-top: -60px;
-}
-
-.draupnir .textoDraupnir {
-    position: absolute;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    width: 100%;
-    height: 100px;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-    overflow: hidden;
-}
-
-.draupnir:hover .textoDraupnir {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(14, 16, 26), rgb(14, 16, 26));
-    height: 200px;
-}
-
-.draupnir .textoDraupnir .nome {
-    transition: 1.5s;
-}
-
-.draupnir:hover .textoDraupnir .nome {
-    color: rgba(0, 0, 0, 0);
-}
-
-.arsenal .container .draupnir:hover p {
-    margin: 25px 5% 2px 5%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 100;
-    color: rgb(175, 159, 147);
 }
 
 .footer {
