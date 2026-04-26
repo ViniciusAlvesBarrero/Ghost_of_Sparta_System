@@ -590,7 +590,7 @@ h1 span {
 .arsenal .subtitulo {
     color: rgb(84, 169, 208);
     font-size: 19px;
-    margin: 0px 0 5px 0;
+    margin: -50px 0 5px 0;
 }
 
 .arsenal h1 {
@@ -622,8 +622,8 @@ h1 span {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 420px;
-    height: 450px;
+    width: 380px;
+    height: 410px;
     background-color: rgba(14, 16, 26, 0.75);
     border: 2px solid rgba(33, 72, 110, 0.4);
     box-shadow: 0 0 100px -30px rgba(249, 173, 38, 0.2);
@@ -664,12 +664,12 @@ h1 span {
 .arsenal .container .cardArma:hover p {
     margin: 25px 5% 2px 5%;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 100;
     color: rgb(175, 159, 147);
 }
 
-.leviata:hover {
+.cardArma:hover {
     border: none;
     border-radius: 10px;
     box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
@@ -683,7 +683,7 @@ h1 span {
 
 .leviata img {
     margin: 10px 0 0 0;
-    width: 240px;
+    width: 210px;
     transition: 1.5s;
 }
 
@@ -693,7 +693,7 @@ h1 span {
 
 .laminas img {
     margin: 10px 0 0 0;
-    width: 300px;
+    width: 280px;
     transition: 1.5s;
 }
 
@@ -703,7 +703,7 @@ h1 span {
 
 .draupnir img {
     margin: 10px 0 0 0;
-    width: 400px;
+    width: 350px;
     transition: 1.5s;
 }
 
