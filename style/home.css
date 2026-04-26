@@ -39,7 +39,7 @@ body {
     margin: 0 100px 0 0 !important;
 }
 
-.header .logo img {
+.header img {
     width: 180px;
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@ a {
     color: rgba(207, 207, 207, 0.8);
 }
 
-.header li {
+li {
     transition: 0.5s;
 }
 
@@ -516,6 +516,7 @@ h1 span {
 .freya {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     width: 400px;
     height: 450px;
@@ -534,13 +535,13 @@ h1 span {
 }
 
 .freya img {
-    margin: 10px 0 0 120px;
-    width: 180px;
+    margin: 10px 0 0 0;
+    width: 240px;
     transition: 1.5s;
 }
 
 .freya:hover img {
-    margin-top: -150px;
+    margin-top: -100px;
 }
 
 .freya .textoFreya {
@@ -593,12 +594,12 @@ h1 span {
 
 .odin img {
     margin: 10px 0 0 0;
-    width: 280px;
+    width: 370px;
     transition: 1.5s;
 }
 
 .odin:hover img {
-    margin-top: -150px;
+    margin-top: -120px;
 }
 
 .odin .textoOdin {
@@ -650,13 +651,13 @@ h1 span {
 }
 
 .thor img {
-    margin: 10px 0 0 0;
-    width: 290px;
+    margin: 10px 0 0 20px;
+    width: 370px;
     transition: 1.5s;
 }
 
 .thor:hover img {
-    margin-top: -100px;
+    margin-top: -120px;
 }
 
 .thor .textoThor {
@@ -741,6 +742,7 @@ h1 span {
     height: 450px;
     background-color: rgba(14, 16, 26, 0.75);
     border: 2px solid rgba(33, 72, 110, 0.4);
+    box-shadow: 0 0 100px -30px rgba(249, 173, 38, 0.2);
     margin: 30px auto 80px auto;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -807,6 +809,7 @@ h1 span {
     height: 450px;
     background-color: rgba(14, 16, 26, 0.75);
     border: 2px solid rgba(33, 72, 110, 0.4);
+    box-shadow: 0 0 100px -30px rgba(249, 173, 38, 0.2);
     margin: 30px auto 80px auto;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -873,6 +876,7 @@ h1 span {
     height: 450px;
     background-color: rgba(14, 16, 26, 0.75);
     border: 2px solid rgba(33, 72, 110, 0.4);
+    box-shadow: 0 0 100px -30px rgba(249, 173, 38, 0.2);
     margin: 30px auto 80px auto;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -925,7 +929,7 @@ h1 span {
 .arsenal .container .draupnir:hover p {
     margin: 25px 5% 2px 5%;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 100;
     color: rgb(175, 159, 147);
 }
@@ -933,12 +937,86 @@ h1 span {
 .footer {
     display: flex;
     flex-direction: column;
-    height: 40vh;
+    height: 45vh;
+    padding: 40px;
     background-color: rgb(5, 6, 9);
-    border-top: 1px solid rgba(249, 173, 38, 0.4);
+    border-top: 1px solid rgba(249, 173, 38, 0.1);
+}
+
+.footer p {
+    text-align: left;
+    font-family: 'constantia';
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgb(175, 159, 147);
 }
 
 .footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 150px;
+}
+
+.footer h6 {
+    font-size: 18px;
+    font-family: 'constantia';
+    font-weight: 100;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    margin: 10px 0 15px 0;
+}
+
+.fraseFooter {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 320px;
+}
+
+.fraseFooter img {
+    width: 170px;
+}
+
+.navFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+}
+
+.navFooter ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+    font-family: 'constantia';
+    font-size: 14px;
+    font-weight: 100;
+    color: rgb(175, 159, 147);
+    margin: 10px 0 0 0;
+}
+
+.navFooter li:hover {
+    color: rgb(249, 173, 38);
+}
+
+.sobreFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.sobreFooter p {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
+
+.footer .divisoria {
+    margin: 50px auto 20px auto;
+    width: 100%;
+}
+
+.copyright {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
