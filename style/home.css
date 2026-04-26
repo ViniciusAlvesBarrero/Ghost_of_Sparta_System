@@ -86,7 +86,8 @@ li {
 }
 
 .fachada {
-    margin-top: 120px;
+    margin-top: 85px;
+    overflow: hidden;
 }
 
 .fachada .container {
@@ -99,6 +100,10 @@ li {
     border: none;
     height: 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(249, 173, 38), rgba(0, 0, 0, 0));
+}
+
+.fachada .divisoria {
+    margin-top: 35px;
 }
 
 .espacamentoDivisoria {
@@ -151,6 +156,37 @@ h1 span {
 .fachada .container button:hover {
     background-color: rgb(151, 0, 13);
     border: 2px solid rgb(194, 0, 17);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+}
+
+.banner .container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 100px 100vh rgba(0, 0, 0, 0.85),
+    inset 0 -150px 80px rgb(0, 0, 0);
+}
+
+.conteudo {
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 100vh;
 }
 
 .saga {
@@ -693,7 +729,7 @@ h1 span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -707,7 +743,7 @@ h1 span {
 .arsenal .subtitulo {
     color: rgb(84, 169, 208);
     font-size: 19px;
-    margin: 20px 0 5px 0;
+    margin: 0px 0 5px 0;
 }
 
 .arsenal h1 {
@@ -724,6 +760,7 @@ h1 span {
     height: auto;
     justify-items: center;
     place-items: center;
+    margin-bottom: -50px;
 }
 
 .arsenal .container p {
