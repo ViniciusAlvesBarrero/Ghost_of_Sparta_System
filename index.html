@@ -8,7 +8,7 @@
     <title>Home-page Ghost of Sparta System</title>
 </head>
 
-<body>
+<body id="idBody">
 
     <div class="inicio" id="idInicio">
         <div class="header" id="idHeader">
@@ -23,7 +23,7 @@
                 <button>Entrar</button>
             </div>
         </div>
-        <div class="fachada" id="fachada">
+        <div class="fachada" id="idFachada">
             <div class="container">
                 <hr class="divisoria">
                 <h5>A JORNADA DE KRATOS</h5>
@@ -32,6 +32,36 @@
                 <p>De Esparta aos Nove Reinos. Descubra a saga épica de vingança, redenção e o laço</p>
                 <p>entre pai e filho que desafiou os deuses.</p>
                 <button class="btnSaga" onclick="trocar()">EXPLORAR A SAGA</button>
+            </div>
+        </div>
+        <div class="banner" id="idBanner">
+            <div class="container">
+                <video autoplay muted loop src="assets/video/saga.mp4" class="video-bg"></video>
+            </div>
+            <div class="conteudo" id="idConteudo">
+                <div class="btn-img">
+                    <button class="btnVoltar" onclick="voltar()"><img class="back-btn" id="backBtn"
+                            src="assets/icon/backBtn.png"></button>
+                </div>
+                <div class="container-btn" id="containerBtn">
+                    <button onclick="abrirPopUp(this)" class="gowI" id="idGowI"></button>
+                    <button onclick="abrirPopUp(this)" class="gowII" id="idGowII"></button>
+                    <button onclick="abrirPopUp(this)" class="gowIII" id="idGowIII"></button>
+                    <button onclick="abrirPopUp(this)" class="gow18" id="idGow18"></button>
+                    <button onclick="abrirPopUp(this)" class="gowRag" id="idGowRag"></button>
+                </div>
+                <div class="pop-up" id="popUpGowI">
+                    <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUpI">X</button>
+                    <div class="fundoGow1"></div>
+                </div>
+                <div class="pop-up" id="popUpGowII">
+                    <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUpII">X</button>
+                    <div class="fundoGow2"></div>
+                </div>
+                <div class="pop-up" id="popUpGowIII">
+                    <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUpIII">X</button>
+                    <div class="fundoGow3"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -225,138 +255,54 @@
 <script>
 
     function trocar() {
-        fachada.innerHTML = `
-        <div class="banner">
-            <div class="container">
-                <video autoplay muted loop src="assets/video/saga.mp4" class="video-bg"></video>
-            </div>
-                <div class="conteudo">
-                    <div class="btn-img">
-                        <button class="btnVoltar" onclick="voltar()"><img class="backBtn" src="assets/icon/backBtn.png"></button>
-                    </div>
-                    <div class="containerBtn">
-                        <button onclick="card1()" class="gowI"></button>    
-                        <button class="gowII"></button>    
-                        <button class="gowIII"></button>    
-                        <button class="gow18"></button>    
-                        <button class="gowRag"></button>    
-                    </div>
-                </div>
-        </div>`;
+        idFachada.style.display = "none";
+        idBanner.style.display = "block";
     }
 
     function voltar() {
-        idHeader.innerHTML = `
-            <div class="container">
-                <img src="assets/icon/logo.png">
-                <ul class="navbar">
-                    <li><a href="#inicio">INÍCIO</a></li>
-                    <li><a href="#saga">SAGA</a></li>
-                    <li><a href="#personagens">PERSONAGENS</a></li>
-                    <li><a href="#arsenal">ARSENAL</a></li>
-                </ul>
-                <button>Entrar</button>
-            </div>`;
-
-        fachada.innerHTML = `
-                    <div class="container">
-                        <hr class="divisoria">
-                        <h5>A JORNADA DE KRATOS</h5>
-                        <h1>GOD OF</h1>
-                        <h1><span>WAR</span></h1>
-                        <p>De Esparta aos Nove Reinos. Descubra a saga épica de vingança, redenção e o laço</p>
-                        <p>entre pai e filho que desafiou os deuses.</p>
-                        <button class="btnSaga" onclick="trocar()">EXPLORAR A SAGA</button>
-                    </div>`;
+        idFachada.style.display = "flex";
+        idBanner.style.display = "none";
     }
 
-    function fecharPopUp() {
-        idHeader.innerHTML = `
-        <style>
-            body {
-                overflow: visible;
-            }
-            
-            .pop-up {
-                display: none;
-            }
+    function fecharPopUp(idBotao) {
+        let valorBotao = idBotao.id;
 
-            .header {
-                display: flex;
-            }
-
-            .fachada {
-                margin-top: 85px;
-            }
-
-            .conteudo {
-                box-shadow: none;
-            }
-        </style>
-
-        <div class="container">
-            <img src="assets/icon/logo.png">
-                <ul class="navbar">
-                    <li><a href="#idInicio">INÍCIO</a></li>
-                    <li><a href="#idSaga">SAGA</a></li>
-                    <li><a href="#idPersonagens">PERSONAGENS</a></li>
-                    <li><a href="#idArsenal">ARSENAL</a></li>
-                </ul>
-            <button>Entrar</button>
-        </div>
-        `;
+        idBody.style.overflow = "visible";
+        idHeader.style.display = "flex";
+        idBanner.style.marginTop = "85px";
+        idConteudo.style.pointerEvents = "auto";
+        containerBtn.style.opacity = "1";
+        backBtn.style.opacity = "1";
+        
+        if (valorBotao == `fecharPopUpI`) {
+            popUpGowI.style.display = "none";
+        } else if (valorBotao == `fecharPopUpII`) {
+            popUpGowII.style.display = "none";
+        } else if (valorBotao == `fecharPopUpIII`) {
+            popUpGowIII.style.display = "none";
+        }
     }
 
-    function card1() {
-        idHeader.innerHTML = `
-        <style>
-            body {
-                overflow: hidden;
-            }
+    function abrirPopUp(idBotao) {
+        let valorBotao = idBotao.id;
 
-            .conteudo *:not(.pop-up):not(.pop-up *) {
-                pointer-events: none;
-                box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.6);
-            }
+        idBody.style.overflow = "hidden";
+        idHeader.style.display = "none";
+        idBanner.style.marginTop = "0";
+        idConteudo.style.pointerEvents = "none";
+        containerBtn.style.opacity = "0.3";
+        backBtn.style.opacity = "0.3";
 
-            .pop-up {
-                display: block;
-            }
-            
-            .header{
-                display: none;
-            }
-            
-            .fachada {
-                margin-top: 0px;
-                transition: 0.7s;
-            }
-
-        </style>`;
-
-        fachada.innerHTML = `
-        <div class="banner">
-            <div class="container">
-                <video autoplay muted loop src="assets/video/saga.mp4" class="video-bg"></video>
-                </div>
-                <div class="conteudo">
-                    <div class="btn-img">
-                        <button class="btnVoltar" onclick="voltar()"><img class="backBtn"
-                        src="assets/icon/backBtn.png"></button>
-                    </div>
-                    <div class="containerBtn">
-                        <button onclick = "card1()" class="gowI"></button>
-                        <button class="gowII"></button>
-                        <button class="gowIII"></button>
-                        <button class="gow18"></button>
-                        <button class="gowRag"></button>
-                    </div>
-                    <div class="pop-up" id="popUp">
-                        <button onclick="fecharPopUp()">X</button>
-                    </div>
-                </div>
-            </div>
-        `;
+        if (valorBotao == `idGowI`) {
+            popUpGowI.style.display = "flex";
+            popUpGowI.style.pointerEvents = "auto";
+        } else if (valorBotao == `idGowII`) {
+            popUpGowII.style.display = "flex";
+            popUpGowII.style.pointerEvents = "auto";
+        } else if (valorBotao == `idGowIII`) {
+            popUpGowIII.style.display = "flex";
+            popUpGowIII.style.pointerEvents = "auto";
+        }
     }
 
 </script>
