@@ -40,7 +40,7 @@ body {
     margin: 0 100px 0 0 !important;
 }
 
-.header img {
+.logo {
     width: 180px;
     display: flex;
     justify-content: center;
@@ -289,6 +289,7 @@ h1 span {
 .pop-up {
     display: none;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     inset: 0;
     margin: auto;
@@ -297,17 +298,73 @@ h1 span {
     background-color: rgba(14, 16, 26);
     border: 2px solid rgba(33, 72, 110, 0.4);
     border-radius: 15px;
-    overflow: hidden;
+    overflow-y: auto;
+}
+
+.pop-up h3 {
+    font-size: 25px;
+    font-family: 'constantia';
+    color: rgb(249, 173, 38);
+    margin-top: 40px;
+}
+
+.pop-up h6 {
+    font-size: 20px;
+    font-family: 'constantia';
+    color: rgb(151, 0, 13);
+}
+
+.container-armas-popup .divisoria {
+    margin: -20px 0 30px 0;
+}
+
+.texto-popup {
+    text-align: center;
+    margin: -15px 20px auto 20px;
+    font-family: 'constantia';
+    font-size: 19px;
+    line-height: 1.3;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cards-popup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    place-items: center;
+    margin-top: 15px;
+    width: 100%;
+    box-shadow: inset 0 -100px 70px -45px rgb(0, 0, 0);
+    gap: 100px;
+}
+
+.container-armas-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.armas-popup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    gap: 100px;
+    width: 100%;
+    gap: 0;
 }
 
 .pop-up .voltar {
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: center;
     align-items: center;
-    align-items: center;
-    top: 12px;
-    left: 12px;
+    margin-top: 18px;
+    left: 153px;
     border: none;
     width: 30px;
     height: 30px;
@@ -321,34 +378,34 @@ h1 span {
     font-size: 15px;
 }
 
-.fundoGow1 {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 16, 26, 0.5), rgba(14, 16, 26, 0.9)), url("../assets/img/background/fundo_gow1.png");
+.popup-fundo {
+    flex-shrink: 0;
     box-shadow: inset 0 -85px 50px rgb(14, 16, 26);
     background-size: cover;
     background-position: top;
     margin-top: -10px;
     width: 100%;
     height: 65vh;
+}
+
+.fundoGow1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 16, 26, 0.5), rgba(14, 16, 26, 0.9)), url("../assets/img/background/fundo_gow1.png");
 }
 
 .fundoGow2 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 16, 26, 0.5), rgba(14, 16, 26, 0.9)), url("../assets/img/background/fundo_gow2.png");
-    box-shadow: inset 0 -85px 50px rgb(14, 16, 26);
-    background-size: cover;
-    background-position: top;
-    margin-top: -10px;
-    width: 100%;
-    height: 65vh;
 }
 
 .fundoGow3 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 16, 26, 0.5), rgba(14, 16, 26, 0.9)), url("../assets/img/background/fundo_gow3.png");
-    box-shadow: inset 0 -85px 50px rgb(14, 16, 26);
-    background-size: cover;
-    background-position: top;
-    margin-top: -10px;
-    width: 100%;
-    height: 65vh;
+}
+
+.fundoGow18 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 16, 26, 0.5), rgba(14, 16, 26, 0.9)), url("../assets/img/background/fundo_gow18.png");
+}
+
+.fundoGowRag {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 16, 26, 0.5), rgba(14, 16, 26, 0.9)), url("../assets/img/background/fundo_gowRag.png");
 }
 
 .saga {
@@ -531,8 +588,8 @@ h1 span {
     color: rgb(255, 255, 255);
 }
 
-.personagens .container p {
-    margin: 5px 0 2px 5%;
+.personagens .container .card p {
+    margin: 5px 3% 2px 5%;
     font-size: 16px;
     color: rgba(0, 0, 0, 0);
     transition: 1s;
@@ -571,7 +628,20 @@ h1 span {
 }
 
 .personagens .container .card:hover p {
-    margin: 5px 0 2px 5%;
+    margin: 5px 3% 2px 5%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.cards-popup p {
+    margin: 5px 3% 2px 5%;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0);
+    transition: 1s;
+}
+
+.cards-popup .card:hover p {
+    margin: 5px 3% 2px 5%;
     font-size: 16px;
     color: rgb(255, 255, 255);
 }
@@ -678,6 +748,56 @@ h1 span {
     transition: 0.8s;
 }
 
+.brok {
+    border: 2px solid rgba(240, 138, 37, 0.4);
+}
+
+.brok:hover {
+    border: 2px solid rgba(243, 136, 28, 0.8);
+    background-image: url("../assets/img/cards/fundo_brok_card.png");
+    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+}
+
+.brok img {
+    margin: 10px 0 0 0;
+    width: 250px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.brok:hover .textoCard {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(100, 68, 37), rgb(100, 68, 37));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.sindri {
+    border: 2px solid rgba(182, 182, 182, 0.4);
+}
+
+.sindri:hover {
+    border: 2px solid rgba(193, 193, 193, 0.8);
+    background-image: url("../assets/img/cards/fundo_sindri_card.png");
+    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+}
+
+.sindri img {
+    margin: 10px 0 0 0;
+    width: 200px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.sindri:hover .textoCard {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(118, 119, 118), rgb(118, 119, 118));
+    height: 330px;
+    transition: 0.8s;
+}
+
 .odin {
     border: 2px solid rgba(56, 28, 11, 0.5);
 }
@@ -728,6 +848,106 @@ h1 span {
     transition: 0.8s;
 }
 
+.ares {
+    border: 2px solid rgba(160, 0, 0, 0.4);
+}
+
+.ares:hover {
+    border: 2px solid rgba(218, 0, 0, 0.8);
+    background-image: url("../assets/img/cards/fundo_ares_card.png");
+    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+}
+
+.ares img {
+    margin: 10px 0 0 20px;
+    width: 290px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.ares:hover .textoCard {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(63, 14, 14), rgb(63, 14, 14));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.athena {
+    border: 2px solid rgba(187, 185, 185, 0.4);
+}
+
+.athena:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-image: url("../assets/img/cards/fundo_athena_card.png");
+    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+}
+
+.athena img {
+    margin: 10px 0 0 20px;
+    width: 320px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.athena:hover .textoCard {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(118, 119, 118), rgb(118, 119, 118));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.zeus {
+    border: 2px solid rgba(43, 74, 121, 0.4);
+}
+
+.zeus:hover {
+    border: 2px solid rgba(74, 213, 255, 0.8);
+    background-image: url("../assets/img/cards/fundo_zeus_card.png");
+    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+}
+
+.zeus img {
+    margin: 10px 0 0 20px;
+    width: 320px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.zeus:hover .textoCard {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(109, 158, 173), rgb(109, 158, 173));
+    height: 330px;
+    transition: 0.8s;
+}
+
+.irmas {
+    border: 2px solid rgba(43, 74, 121, 0.4);
+}
+
+.irmas:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-image: url("../assets/img/cards/fundo_irmas_card.png");
+    box-shadow: inset 0 0 40px 100vh rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+}
+
+.irmas img {
+    margin: 10px 0 0 20px;
+    width: 320px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.irmas:hover .textoCard {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(73, 73, 73), rgb(73, 73, 73));
+    height: 330px;
+    transition: 0.8s;
+}
+
 .arsenal {
     display: flex;
     flex-direction: column;
@@ -771,12 +991,20 @@ h1 span {
 .arsenal .container p {
     margin: 25px 5% 2px 5%;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0);
+}
+
+.armas-popup p {
+    margin: 25px 5% 2px 5%;
+    text-align: center;
+    font-size: 15px;
     color: rgba(0, 0, 0, 0);
 }
 
 .cardArma {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -786,10 +1014,10 @@ h1 span {
     border: 2px solid rgba(33, 72, 110, 0.4);
     box-shadow: 0 0 100px -30px rgba(249, 173, 38, 0.2);
     margin: 30px auto 80px auto;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     user-select: none;
     transition: 1.5s;
+    overflow: hidden;
 }
 
 .cardArma:hover img {
@@ -826,6 +1054,20 @@ h1 span {
     font-size: 15px;
     font-weight: 100;
     color: rgb(175, 159, 147);
+}
+
+.armas-popup .cardArma:hover p {
+    margin: 25px 5% 2px 5%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    color: rgb(175, 159, 147);
+}
+
+.armas-popup .cardArma .nome {
+    margin: 50px 0 0 5%;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
 }
 
 .cardArma:hover {
@@ -869,6 +1111,50 @@ h1 span {
     transition: 1.5s;
 }
 
+.lamina-artemis:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_laminaArtemis_card.png");
+}
+
+.lamina-artemis img {
+    margin: 10px 0 0 0;
+    width: 350px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.lamina-olimpo:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_laminaOlimpo_card.png");
+}
+
+.lamina-olimpo img {
+    margin: 10px 0 0 0;
+    width: 235px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.cabeca:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_cabeca_card.png");
+}
+
+.cabeca img {
+    margin: 10px 0 0 0;
+    width: 300px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+.laminas_athena:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/img/cards/fundo_laminasAthena_card.png");
+}
+
+.laminas_athena img {
+    margin: 10px 0 0 0;
+    width: 350px;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -884,6 +1170,7 @@ h1 span {
     font-size: 13px;
     line-height: 1.8;
     color: rgb(175, 159, 147);
+    margin-top: 2px;
 }
 
 .footer .container {

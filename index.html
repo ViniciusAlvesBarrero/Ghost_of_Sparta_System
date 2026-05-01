@@ -13,7 +13,7 @@
     <div class="inicio" id="idInicio">
         <div class="header" id="idHeader">
             <div class="container">
-                <img src="assets\icon\logo.png">
+                <img class="logo" src="assets\icon\logo.png">
                 <ul class="navbar">
                     <li><a href="#idInicio">INÍCIO</a></li>
                     <li><a href="#idSaga">SAGA</a></li>
@@ -40,27 +40,277 @@
             </div>
             <div class="conteudo" id="idConteudo">
                 <div class="btn-img">
-                    <button class="btnVoltar" onclick="voltar()"><img class="back-btn" id="backBtn"
+                    <button class="btnVoltar" id="backBtn" onclick="voltar()"><img class="back-btn" id="backImg"
                             src="assets/icon/backBtn.png"></button>
                 </div>
                 <div class="container-btn" id="containerBtn">
-                    <button onclick="abrirPopUp(this)" class="gowI" id="idGowI"></button>
-                    <button onclick="abrirPopUp(this)" class="gowII" id="idGowII"></button>
-                    <button onclick="abrirPopUp(this)" class="gowIII" id="idGowIII"></button>
-                    <button onclick="abrirPopUp(this)" class="gow18" id="idGow18"></button>
-                    <button onclick="abrirPopUp(this)" class="gowRag" id="idGowRag"></button>
+                    <a href="#idBody"><button onclick="abrirPopUp(this)" class="gowI" id="idGowI"></button></a>
+                    <a href="#idBody"><button onclick="abrirPopUp(this)" class="gowII" id="idGowII"></button></a>
+                    <a href="#idBody"><button onclick="abrirPopUp(this)" class="gowIII" id="idGowIII"></button></a>
+                    <a href="#idBody"><button onclick="abrirPopUp(this)" class="gow18" id="idGow18"></button></a>
+                    <a href="#idBody"><button onclick="abrirPopUp(this)" class="gowRag" id="idGowRag"></button></a>
                 </div>
                 <div class="pop-up" id="popUpGowI">
                     <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUpI">X</button>
-                    <div class="fundoGow1"></div>
+                    <div class="fundoGow1 popup-fundo"></div>
+                    <img src="assets/icon/logoGow1.png" class="logo">
+                    <p class="texto-popup"> Kratos é um guerreiro espartano atormentado pelo passado, após ter sido
+                        manipulado por Ares a
+                        matar sua própria família. Em busca de redenção, ele passa a servir os deuses do Olimpo,
+                        cumprindo tarefas brutais na esperança de se libertar da culpa. Sua missão final é derrotar
+                        Ares, que ameaça destruir Atenas.
+                        Durante sua jornada, Kratos enfrenta monstros, armadilhas e desafios até encontrar a Caixa de
+                        Pandora, única arma capaz de derrotar um deus. Após conquistá-la, ele encara Ares em uma batalha
+                        devastadora.
+                        No final, Kratos vence e mata o deus da guerra. Mesmo assim, não encontra paz. Ao tentar tirar a
+                        própria vida, é impedido por Atena, que o recompensa tornando-o o novo Deus da Guerra, marcando
+                        o início de um destino ainda mais sombrio.
+                    </p>
+                    <h3>VILÕES PRINCIPAIS</h3>
+                    <div class="cards-popup">
+                        <div class="ares card">
+                            <img src="assets\img\cards\ares_card.png">
+                            <div class="textoCard">
+                                <h5 class="alcunha">O DEUS DA GUERRA</h5>
+                                <h4 class="nome">Ares</h4>
+                                <p>Brutal e manipulador, Ares espalha caos usando Kratos como arma de destruição. Sua
+                                    sede por poder o leva a enfrentar o Fantasma de Esparta, selando seu destino.</p>
+                            </div>
+                        </div>
+                        <div class="athena card">
+                            <img src="assets\img\cards\athena_card.png">
+                            <div class="textoCard">
+                                <h5 class="alcunha">DEUSA DA SABEDORIA</h5>
+                                <h4 class="nome">Athena</h4>
+                                <p>Athena, filha de Zeus, guia Kratos em sua jornada contra Ares, buscando restaurar o
+                                    equilíbrio do Olimpo. Fria e calculista, usa a sabedoria como arma, manipulando
+                                    eventos nas sombras para alcançar seus próprios objetivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-armas-popup">
+                        <h6>ARSENAL DE GOD OF WAR RAGNARÖK</h6>
+                        <div class="divisoria"></div>
+                        <div class="armas-popup">
+                            <div class="laminas cardArma">
+                                <img src="assets\img\cards\laminas_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Lâminas do Caos</h4>
+                                    <p>Acorrentadas aos braços de Kratos por Ares como lembrete de seus pecados, as
+                                        Lâminas do Caos ardem com fogo eterno. Representam o passado sombrio que Kratos
+                                        nunca pode escapar.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lamina-artemis cardArma">
+                                <img src="assets\img\cards\laminaArtemis_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Lâmina de Ártemis</h4>
+                                    <p>Forjada pela deusa Ártemis e concedida a Kratos, a Lâmina
+                                        de Ártemis é uma arma divina imbuída com o poder dos deuses. Seu golpe
+                                        devastador consome a energia do portador, refletindo o sacrifício necessário
+                                        para enfrentar inimigos colossais com poder absoluto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="pop-up" id="popUpGowII">
                     <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUpII">X</button>
-                    <div class="fundoGow2"></div>
+                    <div class="fundoGow2 popup-fundo"></div>
+                    <p class="texto-popup"> Agora como Deus da Guerra, Kratos se torna cada vez mais cruel, o que leva
+                        Zeus a traí-lo.
+                        Durante uma batalha, Zeus retira seus poderes e o mata com a Espada do Olimpo. No entanto,
+                        Kratos é salvo por Gaia, uma Titã. Os Titãs o resgatam porque também foram traídos por Zeus no
+                        passado e desejam vingança contra o Olimpo — eles veem em Kratos a oportunidade perfeita para
+                        derrubar os deuses.
+                        Guiado por esse propósito, Kratos parte em busca das Irmãs do Destino, entidades que controlam o
+                        fluxo do tempo e o destino de todos os seres. Elas tecem, medem e cortam o destino, decidindo o
+                        que deve acontecer e o que jamais pode ser alterado.
+                        Após enfrentar inúmeras provações, Kratos derrota as Irmãs e toma o controle do próprio destino,
+                        voltando no tempo para o momento em que Zeus o traiu. No final, ele confronta Zeus, descobre que
+                        ele é seu pai e, com os Titãs ao seu lado, inicia uma marcha rumo ao Olimpo para destruir os
+                        deuses.</p>
+                    <h3>VILÕES PRINCIPAIS</h3>
+                    <div class="cards-popup">
+                        <div class="zeus card">
+                            <img src="assets\img\cards\zeus_card.png">
+                            <div class="textoCard">
+                                <h5 class="alcunha">O REI DO OLIMPO</h5>
+                                <h4 class="nome">Zeus</h4>
+                                <p>Soberano dos deuses, Zeus governa com poder absoluto, empunhando o raio para impor
+                                    sua vontade. Temendo uma antiga profecia, entra em conflito direto com Kratos pelo
+                                    destino do Olimpo.</p>
+                            </div>
+                        </div>
+                        <div class="irmas card">
+                            <img src="assets/img/cards/irmas_card.png">
+                            <div class="textoCard">
+                                <h5 class="alcunha">TECELÃS DO TEMPO</h5>
+                                <h4 class="nome">As Irmãs do Destino</h4>
+                                <p>Guardando o fluxo do tempo, as Irmãs do Destino controlam passado, presente e futuro
+                                    com poder absoluto. Implacáveis e enigmáticas, manipulam os fios da existência para
+                                    manter o equilíbrio — até que Kratos desafia seu domínio e rompe o próprio destino.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-armas-popup">
+                        <h6>ARSENAL DE GOD OF WAR RAGNARÖK</h6>
+                        <div class="divisoria"></div>
+                        <div class="armas-popup">
+                            <div class="laminas_athena cardArma">
+                                <img src="assets/img/cards/laminasAthena_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Lâminas de Athenas</h4>
+                                    <p>Forjadas para substituir as Lâminas do Caos, as Lâminas de Atena mantêm o estilo
+                                        brutal de Kratos, agora imbuídas com poder divino. Representam sua ligação
+                                        direta com o Olimpo e sua ascensão como o novo Deus da Guerra.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lamina-olimpo cardArma">
+                                <img src="assets/img/cards/laminaOlimpo_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Lâmina do Olimpo</h4>
+                                    <p>Criada por Zeus, a Lâmina do Olimpo concentra um poder imenso capaz de derrotar
+                                        deuses e titãs. Símbolo de traição e destino, foi usada para retirar os poderes
+                                        de Kratos e selar seu caminho de vingança.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cabeca cardArma">
+                                <img src="assets/img/cards/cabeca_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Cabeça de Euryale</h4>
+                                    <p>Arrancada de uma das Górgonas, a cabeça de Euryale concede a Kratos o poder de
+                                        petrificar inimigos. Mesmo após a morte, seu olhar carrega a maldição capaz de
+                                        transformar tudo em pedra.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="pop-up" id="popUpGowIII">
                     <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUpIII">X</button>
-                    <div class="fundoGow3"></div>
+                    <div class="fundoGow3 popup-fundo"></div>
+                    <p class="texto-popup">A guerra começa com Kratos e os Titãs atacando o Olimpo. Porém, durante a
+                        escalada, Gaia o trai e
+                        o abandona, pois percebe que Kratos não busca restaurar o mundo ou ajudar os Titãs — ele quer
+                        apenas vingança pessoal, tornando-se tão destrutivo quanto os próprios deuses.
+                        Kratos sobrevive e segue sozinho, eliminando diversos deuses e mergulhando o mundo no caos. Em
+                        sua jornada, ele descobre que o verdadeiro poder para derrotar Zeus não está apenas na força,
+                        mas na esperança, que estava selada dentro da Caixa de Pandora desde o primeiro jogo.
+                        No final, após derrotar Zeus, Kratos entende que a esperança havia sido liberada dentro dele
+                        quando abriu a caixa no passado. Em um ato final, ele usa a Espada do Olimpo contra si mesmo,
+                        liberando essa esperança para toda a humanidade, oferecendo ao mundo uma chance de recomeço após
+                        a destruição causada por sua vingança.</p>
+                </div>
+                <div class="pop-up" id="popUpGow18">
+                    <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUp18">X</button>
+                    <div class="fundoGow18 popup-fundo"></div>
+                    <p class="texto-popup">Kratos vive agora na mitologia nórdica ao lado de seu filho Atreus. Após a
+                        morte da mãe do
+                        garoto, eles partem para espalhar suas cinzas no topo da montanha mais alta. Durante a jornada,
+                        enfrentam criaturas e deuses, incluindo Baldur.
+                        Baldur não é movido apenas por vingança: ele foi amaldiçoado por sua mãe, Freya, com uma magia
+                        que o torna invulnerável — mas também incapaz de sentir qualquer coisa, como dor, prazer ou
+                        emoção. Isso o leva à loucura, fazendo com que ele busque desesperadamente quebrar essa
+                        maldição, mesmo que isso signifique confrontar e matar quem estiver no caminho.
+                        Ao longo da jornada, Atreus descobre que é um deus e que seu nome verdadeiro é Loki. Em
+                        Jotunheim, eles encontram murais que revelam uma profecia: a jornada deles já estava prevista, e
+                        Loki teria um papel central em eventos futuros, incluindo grandes mudanças nos reinos.
+                        No final, eles cumprem o desejo da mãe e fortalecem sua relação, enquanto Kratos percebe que não
+                        pode fugir de quem é, mas pode escolher ser diferente.</p>
+                </div>
+                <div class="pop-up" id="popUpGowRag">
+                    <button class="voltar" onclick="fecharPopUp(this)" id="fecharPopUpRag">X</button>
+                    <div class="fundoGowRag popup-fundo"></div>
+                    <img src="assets/icon/logoRag.png" class="logo">
+                    <p class="texto-popup">A história se passa durante a aproximação do Ragnarök, um evento profetizado
+                        na mitologia nórdica
+                        que representa o fim do mundo — uma grande guerra entre deuses, gigantes e outras forças, que
+                        levará à destruição de reinos inteiros e ao renascimento de um novo mundo.
+                        Kratos tenta evitar esse destino, enquanto Atreus busca entender seu papel como Loki dentro
+                        dessa profecia. Eles entram em conflito com Odin e Thor, que manipulam os acontecimentos para
+                        manter o controle e evitar sua própria queda.
+                        Ao longo da jornada, Atreus amadurece e passa a tomar decisões próprias, enquanto Kratos
+                        enfrenta o medo de repetir seus erros do passado.
+                        No final, o Ragnarök acontece com uma batalha massiva que resulta na destruição de Asgard e na
+                        queda de Odin. Porém, diferente do passado, Kratos escolhe agir com sabedoria e não apenas
+                        vingança. Ele encontra redenção, enquanto Atreus segue seu próprio caminho, cumprindo seu
+                        destino de forma diferente do que foi previsto.
+                    </p>
+                    <h3>VILÕES PRINCIPAIS</h3>
+                    <div class="cards-popup">
+                        <div class="odin card">
+                            <img src="assets\img\cards\odin_card.png">
+                            <div class="textoCard">
+                                <h5 class="alcunha">O PAI DE TODOS</h5>
+                                <h4 class="nome">Odin</h4>
+                                <p>O Pai de Todos. Manipulador, obsessivo e perigoso. Odin busca conhecimento acima de
+                                    tudo, e
+                                    destruirá qualquer um que ameace seu controle sobre os Nove Reinos.</p>
+                            </div>
+                        </div>
+                        <div class="thor card">
+                            <img src="assets\img\cards\thor_card.png">
+                            <div class="textoCard">
+                                <h5 class="alcunha">O DEUS DO TROVÃO</h5>
+                                <h4 class="nome">Thor</h4>
+                                <p>Portador do Mjölnir e filho de Odin. Diferente das lendas heroicas, o Thor de God of
+                                    War é
+                                    brutal, alcoólatra e assombrado por seus próprios demônios, um reflexo sombrio de
+                                    Kratos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-armas-popup">
+                        <h6>ARSENAL DE GOD OF WAR RAGNARÖK</h6>
+                        <div class="divisoria"></div>
+                        <div class="armas-popup">
+                            <div class="leviata cardArma">
+                                <img src="assets\img\cards\leviata_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Leviatã</h4>
+                                    <p>Forjado pelos irmãos Brok e Sindri, o Machado Leviatã foi criado para rivalizar
+                                        com o
+                                        Mjölnir
+                                        de
+                                        Thor. Imbuído com o poder do gelo, retorna à mão de seu portador quando
+                                        arremessado.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="laminas cardArma">
+                                <img src="assets\img\cards\laminas_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Lâminas do Caos</h4>
+                                    <p>Acorrentadas aos braços de Kratos por Ares como lembrete de seus pecados, as
+                                        Lâminas
+                                        do Caos
+                                        ardem com fogo eterno. Representam o passado sombrio que Kratos nunca pode
+                                        escapar.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="draupnir cardArma">
+                                <img src="assets\img\cards\draupnir_card.png">
+                                <div class="textoCardArma">
+                                    <h4 class="nome">Lança Draupnir</h4>
+                                    <p>Forjada do anel mágico Draupnir e entregue a Kratos por Brok e Sindri, a Lança
+                                        Draupnir se
+                                        multiplica ao ser lançada. Refletindo a nova forma de lutar de Kratos, não mais
+                                        com
+                                        fúria
+                                        cega,
+                                        mas com precisão e propósito.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,8 +379,8 @@
     <div class="personagens" id="idPersonagens">
         <h4 class="subtitulo">CONHEÇA OS GUERREIROS</h4>
         <h1>Personagens</h1>
-        <p>Deuses, mortais e criaturas cujos destinos se entrelaçam na batalha pelo futuro dos</p>
-        <p>Nove Reinos.</p>
+        <p>Deuses, mortais e criaturas protagonizam a última trama desta saga, cujos destinos se entrelaçam</p>
+        <p>na batalha pelo futuro dos Nove Reinos.</p>
         <div class="divisoria espacamentoDivisoria"></div>
         <div class="container">
             <div class="kratos card">
@@ -170,84 +420,89 @@
                         Freya jurou vingança, até o destino forçá-los a se unirem novamente.</p>
                 </div>
             </div>
-            <div class="odin card">
-                <img src="assets\img\cards\odin_card.png">
+            <div class="brok card">
+                <img src="assets\img\cards\brok_card.png">
                 <div class="textoCard">
-                    <h5 class="alcunha">O PAI DE TODOS</h5>
-                    <h4 class="nome">Odin</h4>
-                    <p>O Pai de Todos. Manipulador, obsessivo e perigoso. Odin busca conhecimento acima de tudo, e
-                        destruirá qualquer um que ameace seu controle sobre os Nove Reinos.</p>
+                    <h5 class="alcunha">FERREIRO LENDÁRIO DOS REINOS</h5>
+                    <h4 class="nome">Brok</h4>
+                    <p>Anão de pele azul e língua afiada, Brok é um dos maiores ferreiros dos Nove Reinos. Ao lado de
+                        seu irmão Sindri, forjou armas de poder incomparável, carregando em cada criação o peso de seu
+                        passado e de sua própria alma.</p>
                 </div>
             </div>
-            <div class="thor card">
-                <img src="assets\img\cards\thor_card.png">
+            <div class="sindri card">
+                <img src="assets\img\cards\sindri_card.png">
                 <div class="textoCard">
-                    <h5 class="alcunha">O DEUS DO TROVÃO</h5>
-                    <h4 class="nome">Thor</h4>
-                    <p>Portador do Mjölnir e filho de Odin. Diferente das lendas heroicas, o Thor de God of War é
-                        brutal, alcoólatra e assombrado por seus próprios demônios, um reflexo sombrio de Kratos.</p>
+                    <h5 class="alcunha">ARTESÃO IMPECÁVEL DOS REINOS</h5>
+                    <h4 class="nome">Sindri</h4>
+                    <p>Irmão de Brok, Sindri é um ferreiro meticuloso e perfeccionista, conhecido por sua obsessão
+                        com limpeza e precisão. Mesmo avesso ao caos, foi responsável por forjar armas lendárias,
+                        colocando sua genialidade acima de seus próprios medos.</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="arsenal" id="idArsenal">
-        <h4 class="subtitulo">ARSENAL</h4>
-        <h1 class="titulo">Armas <span>Lendárias</span></h1>
-        <div class="container">
-            <div class="leviata cardArma">
-                <img src="assets\img\cards\leviata_card.png">
-                <div class="textoCardArma">
-                    <h4 class="nome">Leviatã</h4>
-                    <p>Forjado pelos irmãos Brok e Sindri, o Machado Leviatã foi criado para rivalizar com o Mjölnir de
-                        Thor. Imbuído com o poder do gelo, retorna à mão de seu portador quando arremessado.</p>
+        <div class="arsenal" id="idArsenal">
+            <h4 class="subtitulo">ARSENAL</h4>
+            <h1 class="titulo">Armas <span>Lendárias</span></h1>
+            <div class="container">
+                <div class="leviata cardArma">
+                    <img src="assets\img\cards\leviata_card.png">
+                    <div class="textoCardArma">
+                        <h4 class="nome">Leviatã</h4>
+                        <p>Forjado pelos irmãos Brok e Sindri, o Machado Leviatã foi criado para rivalizar com o Mjölnir
+                            de
+                            Thor. Imbuído com o poder do gelo, retorna à mão de seu portador quando arremessado.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="laminas cardArma">
-                <img src="assets\img\cards\laminas_card.png">
-                <div class="textoCardArma">
-                    <h4 class="nome">Lâminas do Caos</h4>
-                    <p>Acorrentadas aos braços de Kratos por Ares como lembrete de seus pecados, as Lâminas do Caos
-                        ardem com fogo eterno. Representam o passado sombrio que Kratos nunca pode escapar.</p>
+                <div class="laminas cardArma">
+                    <img src="assets\img\cards\laminas_card.png">
+                    <div class="textoCardArma">
+                        <h4 class="nome">Lâminas do Caos</h4>
+                        <p>Acorrentadas aos braços de Kratos por Ares como lembrete de seus pecados, as Lâminas do Caos
+                            ardem com fogo eterno. Representam o passado sombrio que Kratos nunca pode escapar.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="draupnir cardArma">
-                <img src="assets\img\cards\draupnir_card.png">
-                <div class="textoCardArma">
-                    <h4 class="nome">Lança Draupnir</h4>
-                    <p>Forjada do anel mágico Draupnir e entregue a Kratos por Brok e Sindri, a Lança Draupnir se
-                        multiplica ao ser lançada. Refletindo a nova forma de lutar de Kratos, não mais com fúria cega,
-                        mas com precisão e propósito.</p>
+                <div class="draupnir cardArma">
+                    <img src="assets\img\cards\draupnir_card.png">
+                    <div class="textoCardArma">
+                        <h4 class="nome">Lança Draupnir</h4>
+                        <p>Forjada do anel mágico Draupnir e entregue a Kratos por Brok e Sindri, a Lança Draupnir se
+                            multiplica ao ser lançada. Refletindo a nova forma de lutar de Kratos, não mais com fúria
+                            cega,
+                            mas com precisão e propósito.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="fraseFooter">
-                <img src="assets\icon\logo.png">
-                <p>De Esparta aos Nove Reinos — a jornada de Kratos, marcada por guerra, perda e redenção. Uma saga que
-                    redefiniu o gênero de ação e deixou sua marca na história dos jogos.</p>
+        <div class="footer">
+            <div class="container">
+                <div class="fraseFooter">
+                    <img src="assets\icon\logo.png">
+                    <p>De Esparta aos Nove Reinos — a jornada de Kratos, marcada por guerra, perda e redenção. Uma saga
+                        que
+                        redefiniu o gênero de ação e deixou sua marca na história dos jogos.</p>
+                </div>
+                <div class="navFooter">
+                    <h6>NAVEGAÇÃO</h6>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#saga">Saga</a></li>
+                        <li><a href="#personagens">Personagens</a></li>
+                        <li><a href="#arsenal">Arsenal</a></li>
+                    </ul>
+                </div>
+                <div class="sobreFooter">
+                    <h6>SOBRE</h6>
+                    <p>Transformamos o poder dos deuses em dados. Calcule, analise e visualize sua força no universo de
+                        God
+                        of War através de dashboards imersivas.</p>
+                </div>
             </div>
-            <div class="navFooter">
-                <h6>NAVEGAÇÃO</h6>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#saga">Saga</a></li>
-                    <li><a href="#personagens">Personagens</a></li>
-                    <li><a href="#arsenal">Arsenal</a></li>
-                </ul>
-            </div>
-            <div class="sobreFooter">
-                <h6>SOBRE</h6>
-                <p>Transformamos o poder dos deuses em dados. Calcule, analise e visualize sua força no universo de God
-                    of War através de dashboards imersivas.</p>
-            </div>
+            <hr class="divisoria">
+            <p class="copyright">© 2026 Ghost of Sparta Legacy - Vinicius Alves Barrero</p>
         </div>
-        <hr class="divisoria">
-        <p class="copyright">© 2026 Ghost of Sparta Legacy - Vinicius Alves Barrero</p>
-    </div>
 </body>
 
 </html>
@@ -272,14 +527,19 @@
         idBanner.style.marginTop = "85px";
         idConteudo.style.pointerEvents = "auto";
         containerBtn.style.opacity = "1";
-        backBtn.style.opacity = "1";
-        
+        backBtn.style.pointerEvents = "auto";
+        backImg.style.opacity = "1";
+
         if (valorBotao == `fecharPopUpI`) {
             popUpGowI.style.display = "none";
         } else if (valorBotao == `fecharPopUpII`) {
             popUpGowII.style.display = "none";
         } else if (valorBotao == `fecharPopUpIII`) {
             popUpGowIII.style.display = "none";
+        } else if (valorBotao == `fecharPopUp18`) {
+            popUpGow18.style.display = "none";
+        } else if (valorBotao == `fecharPopUpRag`) {
+            popUpGowRag.style.display = "none";
         }
     }
 
@@ -291,7 +551,8 @@
         idBanner.style.marginTop = "0";
         idConteudo.style.pointerEvents = "none";
         containerBtn.style.opacity = "0.3";
-        backBtn.style.opacity = "0.3";
+        backBtn.style.pointerEvents = "none";
+        backImg.style.opacity = "0.3";
 
         if (valorBotao == `idGowI`) {
             popUpGowI.style.display = "flex";
@@ -302,6 +563,12 @@
         } else if (valorBotao == `idGowIII`) {
             popUpGowIII.style.display = "flex";
             popUpGowIII.style.pointerEvents = "auto";
+        } else if (valorBotao == `idGow18`) {
+            popUpGow18.style.display = "flex";
+            popUpGow18.style.pointerEvents = "auto";
+        } else if (valorBotao == `idGowRag`) {
+            popUpGowRag.style.display = "flex";
+            popUpGowRag.style.pointerEvents = "auto";
         }
     }
 
