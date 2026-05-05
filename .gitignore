@@ -1,1 +1,7 @@
-assets/video/saga.mp4
+# A linha abaixo determina que o diretório node_modules não será enviado ao repositório remoto
+node_modules
+package-lock.json
+public/assets/video/saga.mp4
+.env.dev
+
+.github

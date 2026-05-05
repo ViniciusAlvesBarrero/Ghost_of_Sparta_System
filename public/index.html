@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
-    <title>Home-page Ghost of Sparta System</title>
+    <title>Home-page Ghost of Sparta Legacy</title>
 </head>
 
 <body id="idBody">
@@ -20,7 +20,9 @@
                     <li><a href="#idPersonagens">PERSONAGENS</a></li>
                     <li><a href="#idArsenal">ARSENAL</a></li>
                 </ul>
-                <button>Entrar</button>
+                <a href="login.html">
+                    <button class="btn-entrar">Entrar</button>
+                </a>
             </div>
         </div>
         <div class="fachada" id="idFachada">
@@ -31,7 +33,7 @@
                 <h1><span>WAR</span></h1>
                 <p>De Esparta aos Nove Reinos. Descubra a saga épica de vingança, redenção e o laço</p>
                 <p>entre pai e filho que desafiou os deuses.</p>
-                <button class="btnSaga" onclick="trocar()">EXPLORAR A SAGA</button>
+                <button class="btn-saga" onclick="trocar()">EXPLORAR A SAGA</button>
             </div>
         </div>
         <div class="banner" id="idBanner">
@@ -39,10 +41,8 @@
                 <video autoplay muted loop src="assets/video/saga.mp4" class="video-bg"></video>
             </div>
             <div class="conteudo" id="idConteudo">
-                <div class="btn-img">
-                    <button class="btnVoltar" id="backBtn" onclick="voltar()"><img class="back-btn" id="backImg"
-                            src="assets/img/icon/backBtn.png"></button>
-                </div>
+                <button class="btn-voltar" id="backBtn" onclick="voltar()"><img class="back-img" id="backImg"
+                        src="assets/img/icon/backBtn.png"></button>
                 <div class="container-btn" id="containerBtn">
                     <a href="#idBody"><button onclick="abrirPopUp(this)" class="gowI" id="idGowI"></button></a>
                     <a href="#idBody"><button onclick="abrirPopUp(this)" class="gowII" id="idGowII"></button></a>
@@ -341,7 +341,7 @@
                                 <h4 class="nome">Magni e Modi</h4>
                                 <p>Filhos de Thor, Magni e Modi carregam a força e a fúria do trovão em batalha. Magni
                                     luta com brutalidade, enquanto Modi canaliza ataques elétricos com
-                                    agressividade. Unidos pelo orgulho, enfrentam Kratos e Atreus como uma dupla 
+                                    agressividade. Unidos pelo orgulho, enfrentam Kratos e Atreus como uma dupla
                                     implacável.</p>
                             </div>
                         </div>

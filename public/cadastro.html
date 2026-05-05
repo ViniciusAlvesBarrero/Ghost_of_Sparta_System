@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>CADASTRO</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container-banner">
+            <a href="login.html">
+                <button class="btn-voltar" id="backBtn"><img class="back-img"
+                        src="assets/img/icon/backBtn.png"></button>
+            </a>
+            <img class="kratos" src="assets/img/icon/iconKratos.png">
+        </div>
+        <div class="container-form">
+            Nome: <input type="text" id="nome_input"><br>
+            Email: <input type="text" id="email_input"><br>
+            Senha: <input type="text" id="senha_input"><br>
+            <button onclick="cadastrar()">cadastrar</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function cadastrar() {
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    alert(`Cadastro realizado com sucesso!`);
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                alert(`${resposta}`);
+            });
+
+        return false;
+    }
+
+</script>

@@ -1,5 +1,6 @@
 body {
     margin: 0 0 0 0;
+    transition: 1.8s;
 }
 
 .inicio {
@@ -81,9 +82,14 @@ li {
     cursor: pointer;
 }
 
-.header button:hover {
+.btn-entrar:hover {
     background-color: rgb(151, 0, 13);
     border: 2px solid rgb(194, 0, 17);
+}
+
+.inicio:has(.btn-entrar:hover) {
+    background-size: 130%;
+    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.7);
 }
 
 .fachada {
@@ -160,9 +166,9 @@ h1 span {
     border: 2px solid rgb(194, 0, 17);
 }
 
-.inicio:has(.btnSaga:hover) {
+.inicio:has(.btn-saga:hover) {
     background-size: 130%;
-    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.7);
 }
 
 .banner {
@@ -202,13 +208,20 @@ h1 span {
     height: 100vh;
 }
 
-.back-btn {
+.back-img {
+    position: absolute;
     width: 50px;
     height: 50px;
     user-select: none;
 }
 
-.conteudo .btnVoltar {
+.back-img:hover {
+    filter: brightness(1.1);
+    width: 52px;
+    height: 52px;
+}
+
+.conteudo .btn-voltar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,16 +235,6 @@ h1 span {
     border: none;
     pointer-events: auto;
     cursor: pointer;
-}
-
-.btn-img {
-    position: absolute;
-}
-
-.btn-img:hover img {
-    filter: brightness(1.1);
-    width: 52px;
-    height: 52px;
 }
 
 .conteudo .container-btn {
