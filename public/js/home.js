@@ -8,8 +8,8 @@
         idBanner.style.display = "none";
     }
 
-    function fecharPopUp(idBotao) {
-        let valorBotao = idBotao.id;
+    function fecharPopUp(botao) {
+        let valorBotao = botao.id;
 
         idBody.style.overflow = "visible";
         idHeader.style.display = "flex";
