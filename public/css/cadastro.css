@@ -76,6 +76,8 @@ body {
     display: flex;
     justify-content: center;
     pointer-events: none;
+    margin-top: 15px;
+    margin-bottom: -20px;
 }
 
 .cadastro-form {
@@ -146,11 +148,12 @@ body {
 
 .cadastro-form p {
     margin-bottom: 10px;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .cadastro-form input {
     display: flex;
+    position: relative;
     background-color: rgba(15, 18, 29, 0.4);
     border: solid 1px rgb(32, 39, 61);
     border-radius: 5px;
@@ -160,7 +163,7 @@ body {
     color: rgb(255, 255, 255);
     height: 40px;
     padding-left: 10px;
-    margin-bottom: -19px;
+    margin-bottom: -15px;
     transition: 0.5s;
 }
 
@@ -168,7 +171,7 @@ body {
     border: solid 1px rgb(249, 173, 38);
 }
 
-.cadastro-form button {
+.cadastro-form .btn-cadastrar {
     background-color: rgb(194, 0, 17);
     border: none;
     border-radius: 5px;
@@ -176,20 +179,140 @@ body {
     font-family: 'constantia';
     height: 40px;
     font-size: 19px;
-    margin-top: 50px;
+    margin-top: 10px;
     transition: 0.5s;
 }
 
-.cadastro-form button:hover {
+.cadastro-form .btn-cadastrar:hover {
     background-color: rgb(128, 0, 11);
     cursor: pointer;
 }
 
-.container:has(.cadastro-form button:hover) .kratos{
-    width: 105%;
+.container:has(.cadastro-form .btn-cadastrar:hover) .kratos {
+    right: -300px;
+}
+
+.erro {
+    margin-top: 20px;
+    color: rgb(194, 0, 17);
+}
+
+.container-forca-senha {
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+.niveis {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.niveis .barra-nivel1 {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 3px;
+    border: none;
+    margin-left: 0;
+}
+
+.niveis .barra-nivel2 {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 3px;
+    border: none;
+    margin-left: 0;
+    transition: 0.5s ease;
+}
+
+.niveis .barra-nivel3 {
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 3px;
+    border: none;
+    margin-left: 0;
+    transition: 0.5s ease;
+}
+
+.container-forca-senha h5 {
+    font-size: 17px;
+    font-family: 'constantia';
+    color: rgb(255, 255, 255);
+    margin: 35px 0 20px 0;
 }
 
 a {
     color: rgb(249, 173, 38);
     text-decoration: none;
+}
+
+.popup-cadastro {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/img/background/fundo_popUp_cadastro.png');
+    background-size: 125%;
+    background-position: center;
+    background-repeat: no-repeat;
+    inset: 0;
+    margin: auto;
+    width: 23%;
+    height: 30vh;
+    border: solid 1px rgb(128, 0, 11);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.btn-fechar {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-fechar:hover {
+    font-size: 15px;
+}
+
+.popup-cadastro p {
+    color: rgb(255, 255, 255);
+    font-family: 'constantia';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.campo-senha {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.olho {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.olho img {
+    width: 18px;
+    height: 22px;
 }
