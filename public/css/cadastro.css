@@ -42,7 +42,7 @@ body {
     position: relative;
     width: 60%;
     height: 100vh;
-    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("../assets/img/background/fundo_cadastro.png");
+    background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url("../assets/img/background/fundo_cadastro.png");
     background-size: cover;
     background-position: center;
 }
