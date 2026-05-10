@@ -19,12 +19,17 @@
 
         <div class="popup-cadastro" id="popUpCadastroEmail">
             <button onclick="fecharPopUp(this)" class="btn-fechar" id="btnFecharEmail">X</button>
-            <p>Insira um e-mail válido.</p>
+            <p id="divExibirErroEmail">Insira um e-mail válido.</p>
         </div>
 
         <div class="popup-cadastro" id="popUpCadastroVazio">
             <button onclick="fecharPopUp(this)" class="btn-fechar" id="btnFecharVazio">X</button>
             <p>Preencha todos os campos.</p>
+        </div>
+
+        <div class="popup-cadastro" id="popUpCadastroSucesso">
+            <button onclick="fecharPopUpSucesso()" class="btn-sucesso" id="btnFecharSucesso">OK</button>
+            <p id="divExibirMensagemSucesso"></p>
         </div>
 
         <div class="container-banner" id="containerBanner">
@@ -81,6 +86,8 @@
 
 </html>
 
+<script src="js/mascaraSenha.js"></script>
+
 <script>
 
     let senhaValida = false;
@@ -135,7 +142,7 @@
             barraNivel1.style.backgroundImage = "linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0), rgba(0, 0, 0, 0))";
             barraNivel2.style.backgroundImage = "linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8))";
             barraNivel3.style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0))";
-            div_erroSenha.innerHTML = `A senha precisa ter no mínimo 6 caracteres e 1 número ou caracter especial`;
+            div_erroSenha.innerHTML = `A senha precisa ter no mínimo 8 caracteres e 1 número ou caracter especial`;
             senhaValida = false;
         } else if (forca <= 2 && tamanhoSenha >= 8) {
             status_forca.innerHTML = `<span style = "color: orange;">MÉDIA</span>`;
@@ -174,38 +181,63 @@
             } else if (senhaVar != senha2Var) {
                 div_erroSenha.innerHTML = `As senhas não se coincidem`;
             } else if (emailValido && senhaValida && nomeValido) {
-                fetch("/usuarios/cadastrar", {
+
+                fetch("/usuarios/autenticarCadastro", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        // crie um atributo que recebe o valor recuperado aqui
-                        // Agora vá para o arquivo routes/usuario.js
-                        nomeServer: nomeVar,
                         emailServer: emailVar,
                         senhaServer: senhaVar,
                     }),
+                }).then(function (resposta) {
+
+                    if (resposta.ok) {
+                        fetch("/usuarios/cadastrar", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({
+                                // crie um atributo que recebe o valor recuperado aqui
+                                // Agora vá para o arquivo routes/usuario.js
+                                nomeServer: nomeVar,
+                                emailServer: emailVar,
+                                senhaServer: senhaVar,
+                            }),
+                        }).then(function (resposta) {
+                            console.log("resposta: ", resposta);
+
+                            if (resposta.ok) {
+                                divExibirMensagemSucesso.innerHTML = "Cadastro realizado com sucesso!";
+
+                                popUpCadastroSucesso.style.display = "flex";
+                                containerForm.style.pointerEvents = "none";
+                                containerForm.style.filter = "brightness(0.4)";
+                                containerBanner.style.filter = "brightness(0.4)";
+                            } else {
+                                throw "Houve um erro ao tentar realizar o cadastro!";
+                            }
+                        }).catch(function (resposta) {
+                            console.log(`#ERRO: ${resposta}`);
+                            alert(`${resposta}`);
+                        });
+
+                        return false;
+                    } else {
+
+                        resposta.text().then(texto => {
+                            divExibirErroEmail.innerHTML = texto;
+                        })
+                        popUpCadastroEmail.style.display = "flex";
+                        containerForm.style.pointerEvents = "none";
+                        containerForm.style.filter = "brightness(0.4)";
+                        containerBanner.style.filter = "brightness(0.4)";
+
+                    }
+
                 })
-                    .then(function (resposta) {
-                        console.log("resposta: ", resposta);
-
-                        if (resposta.ok) {
-                            alert(`Cadastro realizado com sucesso!`);
-
-                            setTimeout(() => {
-                                window.location = "login.html";
-                            }, "2000");
-                        } else {
-                            throw "Houve um erro ao tentar realizar o cadastro!";
-                        }
-                    })
-                    .catch(function (resposta) {
-                        console.log(`#ERRO: ${resposta}`);
-                        alert(`${resposta}`);
-                    });
-
-                return false;
             }
 
             if (!nomeValido) {
@@ -243,29 +275,17 @@
         }
     }
 
-    let contadorOlho1 = 1;
-    let contadorOlho2 = 1;
 
-    function verSenha(botaoOlho) {
-        let idBotao = botaoOlho.id;
+    function fecharPopUpSucesso() {
+        popUpCadastroSucesso.style.display = "none";
 
-        if (idBotao == `btnOlho1` && contadorOlho1 == 1) {
-            olho1.src = 'assets/img/icon/closedEye.png';
-            senha_input.type = "text";
-            contadorOlho1++;
-        } else if (idBotao == `btnOlho1` && contadorOlho1 == 2) {
-            olho1.src = 'assets/img/icon/OpenEye.png';
-            senha_input.type = "password";
-            contadorOlho1--;
-        } else if (idBotao == `btnOlho2` && contadorOlho2 == 1) {
-            olho2.src = 'assets/img/icon/closedEye.png';
-            senha2_input.type = "text";
-            contadorOlho2++;
-        } else if (idBotao == `btnOlho2` && contadorOlho2 == 2) {
-            olho2.src = 'assets/img/icon/OpenEye.png';
-            senha2_input.type = "password";
-            contadorOlho2--;
-        }
+        containerForm.style.pointerEvents = "auto";
+        containerForm.style.filter = "brightness(1)";
+        containerBanner.style.filter = "brightness(1)";
+
+        setTimeout(() => {
+            window.location = "login.html";
+        }, "2000");
     }
 
 </script>

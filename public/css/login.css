@@ -112,7 +112,7 @@ h1 {
     outline: none;
 }
 
-.login-form button {
+.login-form .btn-entrar {
     background-color: rgb(194, 0, 17);
     color: rgb(255, 255, 255);
     font-size: 19px;
@@ -125,7 +125,7 @@ h1 {
     transition: 0.5s;
 }
 
-.login-form button:hover {
+.login-form .btn-entrar:hover {
     background-color: rgb(128, 0, 11);
     cursor: pointer;
 }
@@ -133,4 +133,77 @@ h1 {
 a {
     color: rgb(249, 173, 38);
     text-decoration: none;
+}
+
+.campo-senha {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.olho {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.olho img {
+    width: 18px;
+    height: 22px;
+}
+
+.popup-login {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/img/background/fundo_popUp_cadastro.png');
+    background-size: 125%;
+    background-position: center;
+    background-repeat: no-repeat;
+    inset: 0;
+    margin: auto;
+    width: 23%;
+    height: 30vh;
+    border: solid 1px rgb(101, 0, 0);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.btn-fechar-popup {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    background: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-fechar-popup:hover {
+    font-size: 16px;
+}
+
+.mensagem-erro {
+    color: rgb(255, 255, 255);
+    font-family: 'constantia';
+    font-size: 20px;
+    font-weight: bold;
 }

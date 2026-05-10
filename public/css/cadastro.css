@@ -95,6 +95,10 @@ body {
     transition: 3.5s;
 }
 
+.container:has(.cadastro-form .btn-cadastrar:hover) .kratos {
+    right: -300px;
+}
+
 .divisoria {
     width: 30%;
     border: none;
@@ -188,10 +192,6 @@ body {
     cursor: pointer;
 }
 
-.container:has(.cadastro-form .btn-cadastrar:hover) .kratos {
-    right: -300px;
-}
-
 .erro {
     margin-top: 20px;
     color: rgb(194, 0, 17);
@@ -222,7 +222,6 @@ body {
     height: 3px;
     border: none;
     margin-left: 0;
-    transition: 0.5s ease;
 }
 
 .niveis .barra-nivel3 {
@@ -231,7 +230,6 @@ body {
     height: 3px;
     border: none;
     margin-left: 0;
-    transition: 0.5s ease;
 }
 
 .container-forca-senha h5 {
@@ -252,15 +250,15 @@ a {
     position: absolute;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/img/background/fundo_popUp_cadastro.png');
-    background-size: 125%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/img/background/fundo_popUp_cadastro.png');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     inset: 0;
     margin: auto;
     width: 23%;
     height: 30vh;
-    border: solid 1px rgb(128, 0, 11);
+    border: solid 1px rgb(101, 0, 0);
     border-radius: 10px;
     z-index: 1;
 }
@@ -275,14 +273,39 @@ a {
     width: 22px;
     height: 22px;
     top: 10px;
-    left: 10px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    background: none;
     font-weight: bold;
     font-size: 14px;
     cursor: pointer;
 }
 
 .btn-fechar:hover {
-    font-size: 15px;
+    font-size: 16px;
+}
+
+.btn-sucesso {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    width: 50px;
+    height: 25px;
+    top: 80%;
+    right: 40%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(194, 0, 17);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-sucesso:hover {
+    background-color: rgb(128, 0, 11);
 }
 
 .popup-cadastro p {

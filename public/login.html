@@ -10,7 +10,13 @@
 
 <body>
 
-    <div class="login">
+    <div class="popup-login" id="popUpLoginErro">
+        <button onclick="fecharPopUp()" class="btn-fechar-popup" id="btnFecharPopUp">X</button>
+        <div class="mensagem-erro" id="divExibirErro"></div>
+    </div>
+
+    <div class="login" id="idDivLogin">
+
         <a href="index.html">
             <button class="btn-voltar" id="backBtn"><img class="back-img" src="assets/img/icon/backBtn.png"></button>
         </a>
@@ -26,8 +32,12 @@
                 <p>E-MAIL:</p>
                 <input type="text" id="email_input" placeholder="nome@email.com">
                 <p>SENHA:</p>
-                <input type="password" id="senha_input" placeholder="Senha@123">
-                <button onclick="entrar()">ENTRAR</button>
+                <div class="campo-senha">
+                    <input type="password" id="senha_input" placeholder="Senha@123">
+                    <button id="btnOlho1" class="olho" onclick="verSenha(this)">
+                        <img id="olho1" src="assets/img/icon/openEye.png"></button>
+                </div>
+                <button onclick="entrar()" class="btn-entrar">ENTRAR</button>
             </div>
             <p>Ainda não tem conta? <a href="cadastro.html">Forje a sua</a></p>
         </div>
@@ -36,6 +46,8 @@
 </body>
 
 </html>
+
+<script src="js/mascaraSenha.js"></script>
 
 <script>
 
@@ -81,14 +93,26 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
+                    divExibirErro.innerHTML = texto;
                 });
+                popUpLoginErro.style.display = "flex";
+                idDivLogin.style.filter = "brightness(0.4)";
+
             }
 
         }).catch(function (erro) {
             console.log(erro);
+            divExibirErro.innerHTML = erro;
+            popUpLoginErro.style.display = "flex";
+            idDivLogin.style.filter = "brightness(0.4)";
         })
 
         return false;
+    }
+
+    function fecharPopUp() {
+        popUpLoginErro.style.display = "none";
+        idDivLogin.style.filter = "brightness(1)";
     }
 
 </script>

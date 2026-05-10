@@ -42,6 +42,28 @@ function autenticar(req, res) {
 
 }
 
+function autenticarCadastro(req, res) {
+    var email = req.body.emailServer;
+
+    if (email == undefined) {
+        res.status(400).send("Seu email está indefinido!");
+    } else {
+        usuarioModel.autenticarCadastro(email)
+            .then(function (resultadoAutenticar) {
+
+                if (resultadoAutenticar.length > 0) {
+                    res.status(403).send("Email já cadastrado");
+                } else {
+                    res.status(200).send("Email disponível");
+                }
+
+            })
+            .catch(function (erro) {
+                res.status(500).send("Erro ao verificar email");
+            });
+    }
+}
+
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
@@ -78,5 +100,6 @@ function cadastrar(req, res) {
 
 module.exports = {
     autenticar,
+    autenticarCadastro,
     cadastrar
 }
