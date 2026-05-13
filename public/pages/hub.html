@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/icon/flavicon.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="../css/hub.css">
     <title>God of War Legacy - HUB</title>
 </head>
@@ -16,14 +17,31 @@
 
         <div class="container-btn">
             <ul>
-                <li class="agora"><a href="hub.html"><span>ᚻ</span>HUB</a></li>
-                <li class="link-hub"><a href="quiz.html"><span class="runa">ᚠ</span>QUIZ</a></li>
-                <li class="link-hub"><a href="arvore.html"><span class="runa">ᛒ</span>ÁRVORE YGGDRASIL</a></li>
-                <li class="link-hub"><a href="dashboard.html"><span class="runa">ᛋ</span>DASHBOARD</a></li>
+                <li class="agora"><a href="hub.html"><span>ᚻ</span><span class="material-symbols-outlined icon-btn">
+                            explore
+                        </span>HUB</a></li>
+                <li class="link-hub"><a href="quiz.html"><span class="runa">ᚠ</span><span
+                            class="material-symbols-outlined icon-btn">
+                            auto_stories
+                        </span>QUIZ</a></li>
+                <li class="link-hub"><a href="arvore.html"><span class="runa">ᛒ</span><span
+                            class="material-symbols-outlined icon-btn">
+                            family_history
+                        </span>ÁRVORE YGGDRASIL</a></li>
+                <li class="link-hub"><a href="dashboard.html"><span class="runa">ᛋ</span><span
+                            class="material-symbols-outlined icon-btn">
+                            bar_chart_4_bars
+                        </span>DASHBOARD</a></li>
             </ul>
         </div>
-        <div class="container-logout">
-
+        <div class="container-perfil">
+            <div class="icon-usuario">
+                <img class="img-usuario" src="../assets/img/icon/usuarioDefault.png">
+            </div>
+            <p>Kratos</p>
+            <hr class="divisoria">
+            <button class="btn-logout" onclick="logout()"><span
+                    class="material-symbols-outlined">logout</span>Sair</button>
         </div>
     </div>
 
