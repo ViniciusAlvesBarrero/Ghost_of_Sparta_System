@@ -7,10 +7,11 @@
     <link rel="icon" href="../assets/img/icon/flavicon.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="../css/hub.css">
+    <script src="../js/sessao.js"></script>
     <title>God of War Legacy - HUB</title>
 </head>
 
-<body>
+<body onload="validarSessao()">
 
     <div class="header">
         <img class="logo" src="../assets/img/icon/logo2.png">
@@ -38,15 +39,23 @@
             <div class="icon-usuario">
                 <img class="img-usuario" src="../assets/img/icon/usuarioDefault.png">
             </div>
-            <p>Kratos</p>
+            <p id="divNomeUsuario">Usuário</p>
             <hr class="divisoria">
-            <button class="btn-logout" onclick="logout()"><span
+            <button class="btn-logout" onclick="limparSessao()"><span
                     class="material-symbols-outlined">logout</span>Sair</button>
         </div>
     </div>
 
     <div class="conteudo-secao">
-
+        <div class="posicao-container-avatar">
+            <div class="container-avatar">
+                <img src="../assets/img/avatar/kratos_avatar.png" class="kratos-avatar">
+                <!-- <img src="../assets/img/avatar/armadura_steinbjorn.png" class="armadura">
+                <img src="../assets/img/avatar/armadura_base.png" class="armadura">
+                <img src="../assets/img/avatar/armadura_zeus.png" class="armadura"> -->
+                <img src="../assets/img/avatar/armadura_esplendor.png" class="armadura">
+            </div>
+        </div>
     </div>
 
 </body>
