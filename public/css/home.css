@@ -13,7 +13,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: inset 0 -90px 100px 10px rgb(0, 0, 0);
-    transition: 3s;
+    transition: 5s;
 }
 
 .container {
@@ -90,7 +90,8 @@ li {
 
 .inicio:has(.btn-entrar:hover) {
     background-size: 130%;
-    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.7),
+        inset 0 -90px 100px 10px rgb(0, 0, 0);
 }
 
 .fachada {
@@ -169,7 +170,8 @@ h1 .runa {
 
 .inicio:has(.btn-saga:hover) {
     background-size: 130%;
-    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.7),
+        inset 0 -90px 100px 10px rgb(0, 0, 0);
 }
 
 .banner {
@@ -623,6 +625,10 @@ h1 .runa {
     overflow: hidden;
 }
 
+.card .cor-texto-popup {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) rgb(6, 7, 11), rgb(6, 7, 11));
+}
+
 .card:hover img {
     margin-top: -100px;
 }
@@ -804,6 +810,7 @@ h1 .runa {
 
 .odin {
     border: 2px solid rgba(56, 28, 11, 0.5);
+    background-color: rgb(6, 7, 11);
 }
 
 .odin:hover {
@@ -829,6 +836,7 @@ h1 .runa {
 
 .thor {
     border: 2px solid rgba(33, 72, 110, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .thor:hover {
@@ -854,6 +862,7 @@ h1 .runa {
 
 .ares {
     border: 2px solid rgba(160, 0, 0, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .ares:hover {
@@ -879,6 +888,7 @@ h1 .runa {
 
 .athena {
     border: 2px solid rgba(187, 185, 185, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .athena:hover {
@@ -904,6 +914,7 @@ h1 .runa {
 
 .zeus {
     border: 2px solid rgba(43, 74, 121, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .zeus:hover {
@@ -929,6 +940,7 @@ h1 .runa {
 
 .irmas {
     border: 2px solid rgba(43, 74, 121, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .irmas:hover {
@@ -954,6 +966,7 @@ h1 .runa {
 
 .hades {
     border: 2px solid rgba(145, 46, 72, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .hades:hover {
@@ -979,6 +992,7 @@ h1 .runa {
 
 .poseidon {
     border: 2px solid rgba(49, 156, 185, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .poseidon:hover {
@@ -1004,6 +1018,7 @@ h1 .runa {
 
 .gaia {
     border: 2px solid rgba(52, 49, 11, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .gaia:hover {
@@ -1029,6 +1044,7 @@ h1 .runa {
 
 .baldur {
     border: 2px solid rgba(77, 218, 238, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .baldur:hover {
@@ -1054,6 +1070,7 @@ h1 .runa {
 
 .magni-modi {
     border: 2px solid rgba(14, 141, 88, 0.4);
+    background-color: rgb(6, 7, 11);
 }
 
 .magni-modi:hover {
